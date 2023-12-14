@@ -2,7 +2,10 @@
     "private": true,
     "scripts": {
         "dev": "vite",
-        "build": "vite build"
+        "build": "vite build",
+        "build_dev": "vite build --mode development --outDir dist_dev",
+        "preview_dev": "vite preview --outDir dist_dev",
+        "build_prod": "vite build --mode production --outDir dist_prod"
     },
     "devDependencies": {
         "axios": "^1.1.2",
