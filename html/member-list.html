@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Member list</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="plugins/fontawesome/css/all.min.css">
+        <link rel="stylesheet" href="plugins/jquery-ui-1.11.4/jquery-ui.min.css">
+        <link rel="stylesheet" href="style/css/style.css" type="text/css">
+    </head>
+    <body>
+
+    <div class="wrapper">
+        <div class="header">
+            <div class="header-left">
+                <a href="#">
+                    <img src="./img/sitelogo_login.png" alt="">
+                </a>
+                <span class="logo-text">開発環境</span>
+            </div>
+            <div class="header-right">
+                <div class="dropdown-menu">
+                    <div class="dropdown-btn">
+                        <span class="sBtn-text">ファムヒューフーンさん</span>
+                        &nbsp;<i class="fas fa-caret-down"></i>
+                    </div>
+                  
+                    <ul class="dropdown-content">
+                        <li class="dropdown-item">
+                            <a class="logout" href="#">ログアウト</a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a href="#">
+                                <span>検索条件のリセット</span><br>
+                                <span class="fs-10px text-gray">
+                                    各種一覧画面で検索実行時に、エラーが発生して画面操作ができなくなった場合は、このボタンを押して下さい。現在ログイン中の担当者が検索した全検索条件を消去します。
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="sidebar-container"></div>
+        <div class="main">
+            <div class="page-container">
+                <div class="block-links-direc">
+                    <a class="" href="">ホーム</a>
+                    <a class="" href="">コンタクト管理</a>
+                    <a class="active" href="">顧客管理</a>
+                    <a class="" href="">出荷管理</a>
+                    <a class="" href="">受注管理</a>
+                    <a class="" href="">障害管理</a>
+                    <a class="" href="">集計</a>
+                    <a class="" href="">アフィリエイト</a>
+                    <a class="" href="">キャンペーン</a>
+                    <a class="" href="">空港システム</a>
+                    <a class="" href="">システム管理</a>
+                </div>
+                <div class="block-tab-top">
+                    <!-- Tab links -->
+                    <div class="tab tab-list bg-blue-default">
+                        <a class="tablinks tab-btn-1" onclick="openTab(event, 'tab-1')">変更申請</a>
+                        <a class="tablinks tab-btn-2" onclick="openTab(event, 'tab-2')">キャンセル申請</a>
+                        <a class="tablinks tab-btn-3 active" onclick="openTab(event, 'tab-3')">顧客管理</a>
+                        <a class="tablinks tab-btn-4" onclick="openTab(event, 'tab-4')">お問い合わせ管理</a>
+                        <a class="tablinks tab-btn-5" onclick="openTab(event, 'tab-5')">GO-BEYONDER</a>
+                        <a class="tablinks tab-btn-6" onclick="openTab(event, 'tab-6')">アンケート管理</a>
+                        <a class="tablinks tab-btn-7" onclick="openTab(event, 'tab-7')">Rainbowアンケート</a>
+                    </div>
+                    <!-- Tab content -->
+                    <div id="tab-1" class="tabcontent" style="display: none;">
+                        <div class="page-title-top">
+                            <p>tab title 1</p>
+                        </div>
+                        <div class="block-content-wrapper">
+                            <div class="block-content">
+                                block content
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tab-2" class="tabcontent" style="display: none;">
+                        <div class="page-title-top">
+                            <p>tab title 2</p>
+                        </div>
+                        <div class="block-content-wrapper">
+                            <div class="block-content">
+                                block content
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tab-3" class="tabcontent" style="display: block;">
+                        <div class="page-title-top">
+                            <p>顧客一覧</p>
+                            <a href="" class="btn btn-primary">新規登録</a>
+                        </div>
+                        <div class="block-content-wrapper">
+                            <div class="block-content">
+                                <div class="block-group-search">
+                                    <div class="search-row">
+                                        <div class="field-search">
+                                            <label for="001" class="label-control">状態</label>
+                                            <div class="field-search-input">
+                                                <select name="" id="001" class="form-control">
+                                                    <option value="">選択</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="field-search">
+                                            <label for="002" class="label-control text-red">ID</label>
+                                            <div class="field-search-input">
+                                                <input type="text" class="form-control" name="" id="002">
+                                            </div>
+                                        </div>
+                                        <div class="field-search">
+                                            <label for="003" class="label-control label-xl-small-device">代理店ID</label>
+                                            <div class="field-search-input">
+                                                <input type="text" class="form-control" name="" id="003">
+                                            </div>
+                                        </div>
+                                        <div class="field-search field-2w">
+                                            <label class="label-control has-question">
+                                                氏名
+                                                <span class="has-tooltip" data-toggle="tooltip" title="<span>プルダウンより検索対象項目を選択してください、</span><br><span>ミドルネームは検索対象ではありません</span>">?</span>
+                                            </label>
+                                            <div class="field-search-input">
+                                                <select name="" id="004" class="form-control flex-1">
+                                                    <option value="">選択</option>
+                                                </select>
+                                                <input type="text" class="form-control" name="" id="005" placeholder="姓">
+                                                <input type="text" class="form-control" name="" id="006" placeholder="名">
+                                            </div>
+                                        </div>
+                                        <div class="field-search">
+                                            <label for="007" class="label-control label-xl text-red">メールアドレス</label>
+                                            <div class="field-search-input">
+                                                <input type="text" class="form-control" name="" id="007" placeholder="">
+                                            </div>
+                                        </div>
+                                        <div class="field-search">
+                                            <label for="008" class="label-control label-xl">外部連携</label>
+                                            <div class="field-search-input">
+                                                <select name="" id="008" class="form-control">
+                                                    <option value="">選択</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="search-row">
+                                        <div class="field-search">
+                                            <label for="009" class="label-control">ランク</label>
+                                            <div class="field-search-input">
+                                                <select name="" id="009" class="form-control">
+                                                    <option value="">選択</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="field-search">
+                                            <label for="0010" class="label-control has-question">
+                                                LINE ID
+                                                <span class="has-tooltip" data-toggle="tooltip" title="<b>LINE IDについて</b><br><span>完全一致</span>">?</span>
+                                            </label>
+                                            <div class="field-search-input">
+                                                <input type="text" class="form-control" name="" id="0010">
+                                            </div>
+                                        </div>
+                                        <div class="field-search">
+                                            <label for="0011" class="label-control label-xl-small-device">企業ID</label>
+                                            <div class="field-search-input">
+                                                <input type="text" class="form-control" name="" id="0011">
+                                            </div>
+                                        </div>
+                                        <div class="field-search field-2w">
+                                            <label for="0012" class="label-control">サイト</label>
+                                            <div class="field-search-input">
+                                                <select name="" id="0012" class="form-control flex-1">
+                                                    <option value="">選択</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="field-search">
+                                            <label for="0013" class="label-control label-xl text-red">電話番号</label>
+                                            <div class="field-search-input">
+                                                <input type="text" class="form-control" name="" id="0013" placeholder="">
+                                            </div>
+                                        </div>
+                                        <div class="field-search">
+                                            <label for="0014" class="label-control label-xl">ビジョン会員</label>
+                                            <div class="field-search-input">
+                                                <select name="" id="0014" class="form-control">
+                                                    <option value="">選択</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="search-btngroup">
+                                        <a href="" class="btn btn-black">
+                                            <i class="fas fa-search"></i>&nbsp;&nbsp;&nbsp;
+                                            <span>検索</span>
+                                        </a>
+                                        <a href="" class="btn btn-gray">クリア</a>
+                                        <a href="" class="btn btn-primary">旅プラ検索</a>
+                                    </div>
+                                </div>
+                                <div class="block-search-result">
+                                    <div class="search-result-title">
+                                        該当：9,591件
+                                    </div>
+                                    <div class="search-result-table">
+                                        <table class="table table-bordered table-fixed block-scroll-x">
+                                            <thead>
+                                                <tr class="bg-gray text-center">
+                                                    <td style="width: 100px" rowspan="2">ID</td>
+                                                    <td style="width: 80px"rowspan="2">法人/個人</td>
+                                                    <td style="width: 180px">サイト</td>
+                                                    <td style="width: 150px">氏名(母国語)</td>
+                                                    <td style="width: 350px">メール</td>
+                                                    <td style="width: 130px">携帯電話</td>
+                                                    <td style="width: 110px">状態</td>
+                                                    <td style="width: 140px">ビジョン会員</td>
+                                                    <td style="width: 170px">登録日時</td>
+                                                    <td style="width: 220px">代理店</td>
+                                                    <td style="width: 78px" rowspan="2">詳細</td>
+                                                    <td style="width: 160px" rowspan="2" colspan="2">受注</td>
+                                                </tr>
+                                                <tr class="bg-gray text-center">
+                                                    <td>外部連携</td>
+                                                    <td>氏名(かな)</td>
+                                                    <td>OEMメール</td>
+                                                    <td>固定電話</td>
+                                                    <td>受注回数</td>
+                                                    <td>ランク</td>
+                                                    <td>初回レンタル日</td>
+                                                    <td>企業</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <!-- 1 record -->
+                                                <tr>
+                                                    <td class="text-right" rowspan="2">3855620</td>
+                                                    <td class="text-center" rowspan="2">個人</td>
+                                                    <td class="">townwifi.com</td>
+                                                    <td class="">てすと てすと</td>
+                                                    <td class="">ryota.kataoka@techbeans.co.jp</td>
+                                                    <td class="text-right">09012345678</td>
+                                                    <td class="text-center">本登録</td>
+                                                    <td class="">非ビジョン会員</td>
+                                                    <td class="">2023/04/04 17:37</td>
+                                                    <td class=""></td>
+                                                    <td class="text-center" rowspan="2">
+                                                        <a href="" class="btn btn-primary">詳細</a>
+                                                    </td>
+                                                    <td class="text-center" rowspan="2">
+                                                        <a href="" class="btn btn-primary">詳細</a>
+                                                    </td>
+                                                    <td class="text-center" rowspan="2">
+                                                        <a href="" class="btn btn-primary">詳細</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                    <td>テスト テスト</td>
+                                                    <td></td>
+                                                    <td class="text-right"></td>
+                                                    <td class="text-right">1回</td>
+                                                    <td class="text-center">ブロンズ会員</td>
+                                                    <td>2023/04/04 17:40</td>
+                                                    <td></td>
+                                                </tr>
+                                                <!-- end 1 record -->
+                                                <tr class="bg-gray">
+                                                    <td class="text-right" rowspan="2">3855619</td>
+                                                    <td class="text-center" rowspan="2">法人</td>
+                                                    <td class="">global-wifi.gw-dev.jp</td>
+                                                    <td class="">阿部 樹 </td>
+                                                    <td class="">dummy_20230403173229385@iace.co.jp</td>
+                                                    <td class="text-right">05020183213</td>
+                                                    <td class="text-center">本登録</td>
+                                                    <td class="">非ビジョン会員</td>
+                                                    <td class="">2023/04/03 17:32</td>
+                                                    <td class=""></td>
+                                                    <td class="text-center" rowspan="2">
+                                                        <a href="" class="btn btn-primary">詳細</a>
+                                                    </td>
+                                                    <td class="text-center" rowspan="2">
+                                                        <a href="" class="btn btn-primary">詳細</a>
+                                                    </td>
+                                                    <td class="text-center" rowspan="2">
+                                                        <a href="" class="btn btn-primary">詳細</a>
+                                                    </td>
+                                                </tr>
+                                                <tr class="bg-gray">
+                                                    <td></td>
+                                                    <td>シメイカナ</td>
+                                                    <td></td>
+                                                    <td class="text-right"></td>
+                                                    <td class="text-right">1回</td>
+                                                    <td class="text-center">ブロンズ会員</td>
+                                                    <td>2023/04/04 17:32</td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-right" rowspan="2">3855620</td>
+                                                    <td class="text-center" rowspan="2">個人</td>
+                                                    <td class="">townwifi.com</td>
+                                                    <td class="">てすと てすと</td>
+                                                    <td class="">ryota.kataoka@techbeans.co.jp</td>
+                                                    <td class="text-right">09012345678</td>
+                                                    <td class="text-center">本登録</td>
+                                                    <td class="">非ビジョン会員</td>
+                                                    <td class="">2023/04/04 17:37</td>
+                                                    <td class=""></td>
+                                                    <td class="text-center" rowspan="2">
+                                                        <a href="" class="btn btn-primary">詳細</a>
+                                                    </td>
+                                                    <td class="text-center" rowspan="2">
+                                                        <a href="" class="btn btn-primary">詳細</a>
+                                                    </td>
+                                                    <td class="text-center" rowspan="2">
+                                                        <a href="" class="btn btn-primary">詳細</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                    <td>テスト テスト</td>
+                                                    <td></td>
+                                                    <td class="text-right"></td>
+                                                    <td class="text-right">1回</td>
+                                                    <td class="text-center">ブロンズ会員</td>
+                                                    <td>2023/04/04 17:40</td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr class="bg-gray">
+                                                    <td class="text-right" rowspan="2">3855620</td>
+                                                    <td class="text-center" rowspan="2">個人</td>
+                                                    <td class="">townwifi.com</td>
+                                                    <td class="">てすと てすと</td>
+                                                    <td class="">ryota.kataoka@techbeans.co.jp</td>
+                                                    <td class="text-right">09012345678</td>
+                                                    <td class="text-center">本登録</td>
+                                                    <td class="">非ビジョン会員</td>
+                                                    <td class="">2023/04/04 17:37</td>
+                                                    <td class=""></td>
+                                                    <td class="text-center" rowspan="2">
+                                                        <a href="" class="btn btn-primary">詳細</a>
+                                                    </td>
+                                                    <td class="text-center" rowspan="2">
+                                                        <a href="" class="btn btn-primary">詳細</a>
+                                                    </td>
+                                                    <td class="text-center" rowspan="2">
+                                                        <a href="" class="btn btn-primary">詳細</a>
+                                                    </td>
+                                                </tr>
+                                                <tr class="bg-gray">
+                                                    <td></td>
+                                                    <td>テスト テスト</td>
+                                                    <td></td>
+                                                    <td class="text-right"></td>
+                                                    <td class="text-right">1回</td>
+                                                    <td class="text-center">ブロンズ会員</td>
+                                                    <td>2023/04/04 17:40</td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-right" rowspan="2">3855620</td>
+                                                    <td class="text-center" rowspan="2">個人</td>
+                                                    <td class="">townwifi.com</td>
+                                                    <td class="">てすと てすと</td>
+                                                    <td class="">ryota.kataoka@techbeans.co.jp</td>
+                                                    <td class="text-right">09012345678</td>
+                                                    <td class="text-center">本登録</td>
+                                                    <td class="">非ビジョン会員</td>
+                                                    <td class="">2023/04/04 17:37</td>
+                                                    <td class=""></td>
+                                                    <td class="text-center" rowspan="2">
+                                                        <a href="" class="btn btn-primary">詳細</a>
+                                                    </td>
+                                                    <td class="text-center" rowspan="2">
+                                                        <a href="" class="btn btn-primary">詳細</a>
+                                                    </td>
+                                                    <td class="text-center" rowspan="2">
+                                                        <a href="" class="btn btn-primary">詳細</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                    <td>テスト テスト</td>
+                                                    <td></td>
+                                                    <td class="text-right"></td>
+                                                    <td class="text-right">1回</td>
+                                                    <td class="text-center">ブロンズ会員</td>
+                                                    <td>2023/04/04 17:40</td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr class="bg-gray">
+                                                    <td class="text-right" rowspan="2">3855620</td>
+                                                    <td class="text-center" rowspan="2">個人</td>
+                                                    <td class="">townwifi.com</td>
+                                                    <td class="">てすと てすと</td>
+                                                    <td class="">ryota.kataoka@techbeans.co.jp</td>
+                                                    <td class="text-right">09012345678</td>
+                                                    <td class="text-center">本登録</td>
+                                                    <td class="">非ビジョン会員</td>
+                                                    <td class="">2023/04/04 17:37</td>
+                                                    <td class=""></td>
+                                                    <td class="text-center" rowspan="2">
+                                                        <a href="" class="btn btn-primary">詳細</a>
+                                                    </td>
+                                                    <td class="text-center" rowspan="2">
+                                                        <a href="" class="btn btn-primary">詳細</a>
+                                                    </td>
+                                                    <td class="text-center" rowspan="2">
+                                                        <a href="" class="btn btn-primary">詳細</a>
+                                                    </td>
+                                                </tr>
+                                                <tr class="bg-gray">
+                                                    <td></td>
+                                                    <td>テスト テスト</td>
+                                                    <td></td>
+                                                    <td class="text-right"></td>
+                                                    <td class="text-right">1回</td>
+                                                    <td class="text-center">ブロンズ会員</td>
+                                                    <td>2023/04/04 17:40</td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-right" rowspan="2">3855620</td>
+                                                    <td class="text-center" rowspan="2">個人</td>
+                                                    <td class="">townwifi.com</td>
+                                                    <td class="">てすと てすと</td>
+                                                    <td class="">ryota.kataoka@techbeans.co.jp</td>
+                                                    <td class="text-right">09012345678</td>
+                                                    <td class="text-center">本登録</td>
+                                                    <td class="">非ビジョン会員</td>
+                                                    <td class="">2023/04/04 17:37</td>
+                                                    <td class=""></td>
+                                                    <td class="text-center" rowspan="2">
+                                                        <a href="" class="btn btn-primary">詳細</a>
+                                                    </td>
+                                                    <td class="text-center" rowspan="2">
+                                                        <a href="" class="btn btn-primary">詳細</a>
+                                                    </td>
+                                                    <td class="text-center" rowspan="2">
+                                                        <a href="" class="btn btn-primary">詳細</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                    <td>テスト テスト</td>
+                                                    <td></td>
+                                                    <td class="text-right"></td>
+                                                    <td class="text-right">1回</td>
+                                                    <td class="text-center">ブロンズ会員</td>
+                                                    <td>2023/04/04 17:40</td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr class="bg-gray">
+                                                    <td class="text-right" rowspan="2">3855620</td>
+                                                    <td class="text-center" rowspan="2">個人</td>
+                                                    <td class="">townwifi.com</td>
+                                                    <td class="">てすと てすと</td>
+                                                    <td class="">ryota.kataoka@techbeans.co.jp</td>
+                                                    <td class="text-right">09012345678</td>
+                                                    <td class="text-center">本登録</td>
+                                                    <td class="">非ビジョン会員</td>
+                                                    <td class="">2023/04/04 17:37</td>
+                                                    <td class=""></td>
+                                                    <td class="text-center" rowspan="2">
+                                                        <a href="" class="btn btn-primary">詳細</a>
+                                                    </td>
+                                                    <td class="text-center" rowspan="2">
+                                                        <a href="" class="btn btn-primary">詳細</a>
+                                                    </td>
+                                                    <td class="text-center" rowspan="2">
+                                                        <a href="" class="btn btn-primary">詳細</a>
+                                                    </td>
+                                                </tr>
+                                                <tr class="bg-gray">
+                                                    <td></td>
+                                                    <td>テスト テスト</td>
+                                                    <td></td>
+                                                    <td class="text-right"></td>
+                                                    <td class="text-right">1回</td>
+                                                    <td class="text-center">ブロンズ会員</td>
+                                                    <td>2023/04/04 17:40</td>
+                                                    <td></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="search-pagination">
+                                        <p class="search-result-title">
+                                            <span>1〜15</span>
+                                            &nbsp;/&nbsp;
+                                            <span>9,591件</span>
+                                        </p>
+                                        <div class="pagi">
+                                            <ul>
+                                                <li>
+                                                    <a href=""><i class="fas fa-chevron-left"></i></a>
+                                                </li>
+                                                <li>
+                                                    <a href="">1</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">2</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">3</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">...</a>
+                                                </li>
+                                                </li>
+                                                <li>
+                                                    <a href="">6</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">7</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">8</a>
+                                                </li>
+                                                <li>
+                                                    <a href=""><i class="fas fa-chevron-right"></i></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tab-4" class="tabcontent" style="display: none;">
+                        <div class="page-title-top">
+                            <p>tab title 4</p>
+                        </div>
+                        <div class="block-content-wrapper">
+                            <div class="block-content">
+                                block content
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tab-5" class="tabcontent" style="display: none;">
+                        <div class="page-title-top">
+                            <p>tab title 5</p>
+                        </div>
+                        <div class="block-content-wrapper">
+                            <div class="block-content">
+                                block content
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tab-6" class="tabcontent" style="display: none;">
+                        <div class="page-title-top">
+                            <p>tab title 6</p>
+                        </div>
+                        <div class="block-content-wrapper">
+                            <div class="block-content">
+                                block content
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tab-7" class="tabcontent" style="display: none;">
+                        <div class="page-title-top">
+                            <p>tab title 7</p>
+                        </div>
+                        <div class="block-content-wrapper">
+                            <div class="block-content">
+                                block content
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-page">
+                    Copyright © 2023 vision-wifi.jp.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="plugins/jquery-1.11.3.min.js"></script>
+    <script src="plugins/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>VMDB_SC_1102</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="plugins/fontawesome/css/all.min.css">
+        <link rel="stylesheet" href="plugins/jquery-ui-1.11.4/jquery-ui.min.css">
+        <link rel="stylesheet" href="style/css/style.css" type="text/css">
+    </head>
+    <body>
+
+    <div class="wrapper">
+        <div class="header">
+            <div class="header-left">
+                <a href="#">
+                    <img src="./img/sitelogo_login.png" alt="">
+                </a>
+                <span class="logo-text">開発環境</span>
+            </div>
+            <div class="header-right">
+                <div class="dropdown-menu">
+                    <div class="dropdown-btn">
+                        <span class="sBtn-text">ファムヒューフーンさん</span>
+                        &nbsp;<i class="fas fa-caret-down"></i>
+                    </div>
+                  
+                    <ul class="dropdown-content">
+                        <li class="dropdown-item">
+                            <a class="logout" href="#">ログアウト</a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a href="#">
+                                <span>検索条件のリセット</span><br>
+                                <span class="fs-10px text-gray">
+                                    各種一覧画面で検索実行時に、エラーが発生して画面操作ができなくなった場合は、このボタンを押して下さい。現在ログイン中の担当者が検索した全検索条件を消去します。
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="sidebar-container"></div>
+        <div class="main">
+            <div class="page-container">
+                <div class="block-links-direc">
+                    <a class="" href="">ホーム</a>
+                    <a class="" href="">コンタクト管理</a>
+                    <a class="" href="">顧客管理</a>
+                    <a class="" href="">出荷管理</a>
+                    <a class="" href="">受注管理</a>
+                    <a class="" href="">障害管理</a>
+                    <a class="" href="">集計</a>
+                    <a class="" href="">アフィリエイト</a>
+                    <a class="" href="">キャンペーン</a>
+                    <a class="" href="">空港システム</a>
+                    <a class="active" href="">システム管理</a>
+                </div>
+                <div class="block-tab-top">
+                    <!-- Tab links -->
+                    <div class="tab tab-list bg-blue-default">
+                        <a class="tablinks tab-btn-1 active" onclick="openTab(event, 'tab-1')">担当者管理</a>
+                        <a class="tablinks tab-btn-2" onclick="openTab(event, 'tab-2')">対応国管理</a>
+                        <a class="tablinks tab-btn-3" onclick="openTab(event, 'tab-3')">周遊国管理</a>
+                        <a class="tablinks tab-btn-4" onclick="openTab(event, 'tab-4')">商材管理</a>
+                        <a class="tablinks tab-btn-5" onclick="openTab(event, 'tab-5')">端末管理</a>
+                        <a class="tablinks tab-btn-6" onclick="openTab(event, 'tab-6')">オプション管理</a>
+                        <a class="tablinks tab-btn-7" onclick="openTab(event, 'tab-7')">オプション長期</a>
+                        <a class="tablinks tab-btn-8" onclick="openTab(event, 'tab-8')">オプションプラン</a>
+                        <a class="tablinks tab-btn-9" onclick="openTab(event, 'tab-9')">場所管理</a>
+                        <a class="tablinks tab-btn-10" onclick="openTab(event, 'tab-10')">受取/返却場所管理</a>
+                        <a class="tablinks tab-btn-11" onclick="openTab(event, 'tab-11')">APIキャッシュ管理</a>
+                    </div>
+                    <!-- Tab content -->
+                    <div id="tab-1" class="tabcontent" style="display: block;">
+                        <div class="page-title-top">
+                            <p>担当者詳細</p>
+                            <div>
+                                <a href="" class="btn btn-primary">担当者詳細</a>
+                                <a href="" class="btn btn-primary">メールフォーム</a>
+                            </div>
+                        </div>
+                        <div class="block-content-wrapper">
+                            <div class="block-content">
+                                <div class="block-search-result w-per-80 m-auto">
+                                    <div class="edit-page-content">
+                                        <table class="table table-bordered">
+                                            <colgroup>
+                                                <col style="width: 170px;">
+                                                <col style="width: 430px;">
+                                                <col style="width: 170px;">
+                                                <col style="width: 430px;">
+                                            </colgroup>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="bg-gray">
+                                                        <span class="">
+                                                            ログインID
+                                                        </span><br>
+                                                        <span class="text-red">変更不可</span>
+                                                    </td>
+                                                    <td>
+                                                        <span>150048</span>
+                                                    </td>
+                                                    <td class="bg-gray">
+                                                        <span class="">
+                                                            パスワード
+                                                        </span>
+                                                    </td>
+                                                    <td>
+                                                        <table class="table table-fixed table-nested">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td style="width: 110px;">
+                                                                        <span class="label-required">パスワード	</span>
+                                                                    </td>
+                                                                    <td>
+                                                                        <input type="text" class="form-control" name="" id="" value="Vision123">
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td style="width: 110px;">
+                                                                        <span class="label-required">有効期限</span>
+                                                                    </td>
+                                                                    <td>
+                                                                        <input type="text" class="form-control" name="" id="" value="08/05/2023">
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td style="width: 110px;">
+                                                                        <span class="">ログイン失敗数</span>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="d-flex-center-y">
+                                                                            <input type="number" name="" id="" class="form-control" value="0">
+                                                                            <span>&nbsp;回&nbsp;</span>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="bg-gray">
+                                                        <span class="label-required">パスワード	</span>
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" name="" id="" class="form-control" value="ファムヒューフーン">
+                                                    </td>
+                                                    <td class="bg-gray">
+                                                        <span class="label-required">フリガナ</span>
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" name="" id="" class="form-control" value="ファムヒューフーン">
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="bg-gray">
+                                                        <span class="label-required">メールアドレス</span>
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" name="" id="" class="form-control" value="p_pham@vision-net.co.jp">
+                                                    </td>
+                                                    <td class="bg-gray">
+                                                        <span class="label-required">権限</span>
+                                                    </td>
+                                                    <td>
+                                                        <select name="" id="" class="form-control">
+                                                            <option value="">グランドマスター</option>
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="bg-gray">
+                                                        <span class="label-required">部署</span>
+                                                    </td>
+                                                    <td>
+                                                        <select name="" id="" class="form-control">
+                                                            <option value="">東京</option>
+                                                        </select>
+                                                    </td>
+                                                    <td class="bg-gray">
+                                                        <span class="label-required">部署</span>
+                                                    </td>
+                                                    <td>
+                                                        <select name="" id="" class="form-control">
+                                                            <option value="">townwifi.com</option>
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="bg-gray">
+                                                        <span class="label-required">状態</span>
+                                                    </td>
+                                                    <td>
+                                                        <select name="" id="" class="form-control">
+                                                            <option value="">通常</option>
+                                                        </select>
+                                                    </td>
+                                                    <td class="bg-gray">
+                                                        <span class="label-required">一覧表示</span>
+                                                    </td>
+                                                    <td>
+                                                        <div class="d-flex-center-y">
+                                                            <label class="d-flex-center-y">
+                                                                <input type="radio" name="search_yn" value="Y" checked="" class="">
+                                                                <span class="text-blue">表示</span>
+                                                            </label>
+                                                            <label class="d-flex-center-y ml-20px">
+                                                                <input type="radio" name="search_yn" value="N" checked="" class="">
+                                                                <span class="text-red">非表示</span>
+                                                            </label>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="bg-gray" rowspan="3">
+                                                        <p class="has-question">
+                                                            <span class="label-required">IP制限</span>
+                                                            <span class="has-tooltip" data-toggle="tooltip" title="<span>特定のIP以外にアクセスを許可しない場合は、有効にします。複数のIP・サブネットマスクが指定可能です。</span>">?</span>
+                                                        </p>
+                                                    </td>
+                                                    <td colspan="3" class="no-border">
+                                                        <div class="d-flex-center-y">
+                                                            <label class="d-flex-center-y">
+                                                                <input type="radio" name="search_yn" value="Y" checked="" class="">
+                                                                <span class="text-blue">表示</span>
+                                                            </label>
+                                                            <label class="d-flex-center-y ml-20px">
+                                                                <input type="radio" name="search_yn" value="N" checked="" class="">
+                                                                <span class="text-red">非表示</span>
+                                                            </label>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="3" class="no-border">
+                                                        <p>許可するIP</p>
+                                                        <textarea name="" id="" cols="30" rows="10" class="form-control no-resize cell-note">
+211.121.200.186
+61.206.171.217
+115.79.33.238
+113.161.70.173
+118.69.108.231
+192.168.64.54
+52.199.183.121
+54.238.97.66
+8.29.230.113
+8.29.230.114                                                           
+                                                        </textarea>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="3" class="no-border">
+                                                        <p><span class="text-red">※</span>複数許可する場合は、必ず改行を入れてください。</p>
+                                                        <p><span class="text-red">※</span>IPアドレスの後に「/」を付けて、サブネットマスクを指定できます（IPアドレスのみ登録可）</p>
+                                                        <p><span class="text-red">記入例: </span>IPアドレスのみ… <span class="text-red">123.234.124.235 </span>IPアドレスとサブネットマスク…<span class="text-red">123.234.124.235/255.255.255.0</span></p>
+                                                        <p><span class="text-red">※</span>現在接続中のIPアドレスが許可されていない場合は、設定変更と同時に管理画面へアクセスできなくなりますので、ご注意下さい。</p>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="bg-gray">
+                                                        <span class="">登録日付</span>
+                                                    </td>
+                                                    <td>
+                                                        <span>2022/12/28 16:46</span>
+                                                    </td>
+                                                    <td class="bg-gray">
+                                                        <span class="">最終ログイン日付	</span>
+                                                    </td>
+                                                    <td>
+                                                        <span>2023/06/07 17:48</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="bg-gray">
+                                                        <span class="">最終ログインIP</span>
+                                                    </td>
+                                                    <td>
+                                                        <span>54.238.97.66</span>
+                                                    </td>
+                                                    <td class="bg-gray">
+                                                        <p class="has-question">
+                                                            <span>最終ログインエラーIP </span>
+                                                            <span class="has-tooltip" data-toggle="tooltip" title="<span>IP制限が有効時に、担当者が未許可のIPでログインした場合に記録されます。</span>">?</span>
+                                                        </p>
+                                                    </td>
+                                                    <td>
+                                                        <span>-</span>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <div class="text-center group-btn">
+                                            <a href="" class="btn btn-gray">一覧へ</a>
+                                            <a href="" class="btn btn-primary">登録</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tab-2" class="tabcontent" style="display: none;">
+                        <div class="page-title-top">
+                            <p>tab title 2</p>
+                        </div>
+                        <div class="block-content-wrapper">
+                            <div class="block-content">
+                                block content
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tab-3" class="tabcontent" style="display: none;">
+                        <div class="page-title-top">
+                            <p>tab title 3</p>
+                        </div>
+                        <div class="block-content-wrapper">
+                            <div class="block-content">
+                                block content
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tab-4" class="tabcontent" style="display: none;">
+                        <div class="page-title-top">
+                            <p>tab title 4</p>
+                        </div>
+                        <div class="block-content-wrapper">
+                            <div class="block-content">
+                                block content
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tab-5" class="tabcontent" style="display: none;">
+                        <div class="page-title-top">
+                            <p>tab title 5</p>
+                        </div>
+                        <div class="block-content-wrapper">
+                            <div class="block-content">
+                                block content
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tab-6" class="tabcontent" style="display: none;">
+                        <div class="page-title-top">
+                            <p>tab title 6</p>
+                        </div>
+                        <div class="block-content-wrapper">
+                            <div class="block-content">
+                                block content
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tab-7" class="tabcontent" style="display: none;">
+                        <div class="page-title-top">
+                            <p>tab title 7</p>
+                        </div>
+                        <div class="block-content-wrapper">
+                            <div class="block-content">
+                                block content
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tab-8" class="tabcontent" style="display: none;">
+                        <div class="page-title-top">
+                            <p>tab title 8</p>
+                        </div>
+                        <div class="block-content-wrapper">
+                            <div class="block-content">
+                                block content
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tab-9" class="tabcontent" style="display: none;">
+                        <div class="page-title-top">
+                            <p>tab title 9</p>
+                        </div>
+                        <div class="block-content-wrapper">
+                            <div class="block-content">
+                                block content
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tab-10" class="tabcontent" style="display: none;">
+                        <div class="page-title-top">
+                            <p>tab title 10</p>
+                        </div>
+                        <div class="block-content-wrapper">
+                            <div class="block-content">
+                                block content
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tab-11" class="tabcontent" style="display: none;">
+                        <div class="page-title-top">
+                            <p>tab title 11</p>
+                        </div>
+                        <div class="block-content-wrapper">
+                            <div class="block-content">
+                                block content
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-page">
+                    Copyright © 2023 vision-wifi.jp.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="plugins/jquery-1.11.3.min.js"></script>
+    <script src="plugins/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>

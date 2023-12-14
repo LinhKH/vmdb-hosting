@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Member Register</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="plugins/fontawesome/css/all.min.css">
+        <link rel="stylesheet" href="plugins/jquery-ui-1.11.4/jquery-ui.min.css">
+        <link rel="stylesheet" href="style/css/style.css" type="text/css">
+    </head>
+    <body>
+
+    <div class="wrapper">
+        <div class="header">
+            <div class="header-left">
+                <a href="#">
+                    <img src="./img/sitelogo_login.png" alt="">
+                </a>
+                <span class="logo-text">開発環境</span>
+            </div>
+            <div class="header-right">
+                <div class="dropdown-menu">
+                    <div class="dropdown-btn">
+                        <span class="sBtn-text">ファムヒューフーンさん</span>
+                        &nbsp;<i class="fas fa-caret-down"></i>
+                    </div>
+                  
+                    <ul class="dropdown-content">
+                        <li class="dropdown-item">
+                            <a class="logout" href="#">ログアウト</a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a href="#">
+                                <span>検索条件のリセット</span><br>
+                                <span class="fs-10px text-gray">
+                                    各種一覧画面で検索実行時に、エラーが発生して画面操作ができなくなった場合は、このボタンを押して下さい。現在ログイン中の担当者が検索した全検索条件を消去します。
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="sidebar-container"></div>
+        <div class="main">
+            <div class="page-container">
+                <div class="block-links-direc">
+                    <a class="" href="">ホーム</a>
+                    <a class="" href="">コンタクト管理</a>
+                    <a class="active" href="">顧客管理</a>
+                    <a class="" href="">出荷管理</a>
+                    <a class="" href="">受注管理</a>
+                    <a class="" href="">障害管理</a>
+                    <a class="" href="">集計</a>
+                    <a class="" href="">アフィリエイト</a>
+                    <a class="" href="">キャンペーン</a>
+                    <a class="" href="">空港システム</a>
+                    <a class="" href="">システム管理</a>
+                </div>
+                <div class="block-tab-top">
+                    <!-- Tab links -->
+                    <div class="tab tab-list bg-blue-default">
+                        <a class="tablinks tab-btn-1" onclick="openTab(event, 'tab-1')">変更申請</a>
+                        <a class="tablinks tab-btn-2" onclick="openTab(event, 'tab-2')">キャンセル申請</a>
+                        <a class="tablinks tab-btn-3 active" onclick="openTab(event, 'tab-3')">顧客管理</a>
+                        <a class="tablinks tab-btn-4" onclick="openTab(event, 'tab-4')">お問い合わせ管理</a>
+                        <a class="tablinks tab-btn-5" onclick="openTab(event, 'tab-5')">GO-BEYONDER</a>
+                        <a class="tablinks tab-btn-6" onclick="openTab(event, 'tab-6')">アンケート管理</a>
+                        <a class="tablinks tab-btn-7" onclick="openTab(event, 'tab-7')">Rainbowアンケート</a>
+                    </div>
+                    <!-- Tab content -->
+                    <div id="tab-1" class="tabcontent" style="display: none;">
+                        <div class="page-title-top">
+                            <p>tab title 1</p>
+                        </div>
+                        <div class="block-content-wrapper">
+                            <div class="block-content">
+                                block content
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tab-2" class="tabcontent" style="display: none;">
+                        <div class="page-title-top">
+                            <p>tab title 2</p>
+                        </div>
+                        <div class="block-content-wrapper">
+                            <div class="block-content">
+                                block content
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tab-3" class="tabcontent" style="display: block;">
+                        <div class="page-title-top">
+                            <p>顧客登録</p>
+                        </div>
+                        <div class="block-content-wrapper">
+                            <div class="block-content">
+
+                                <!-- Tab links -->
+                                <div class="tab tab-list tab-member-regis">
+                                    <a class="tablinks tab-btn-1" onclick="openTab(event, 'tab-mem-1')">コンタクト</a>
+                                    <a class="tablinks tab-btn-2 active" onclick="openTab(event, 'tab-mem-2')">顧客詳細</a>
+                                    <a class="tablinks tab-btn-3 disabled" onclick="openTab(event, 'tab-mem-3')">受注詳細</a>
+                                    <a class="tablinks tab-btn-4 disabled" onclick="openTab(event, 'tab-mem-4')">受注一覧</a>
+                                    <a class="tablinks tab-btn-5 disabled" onclick="openTab(event, 'tab-mem-5')">子受注一覧</a>
+                                    <a class="tablinks tab-btn-6 disabled" onclick="openTab(event, 'tab-mem-6')">受注登録</a>
+                                </div>
+                                <!-- Tab content -->
+                                <div id="tab-mem-1" class="tabcontent" style="display: none;">
+                                    content1
+                                </div>
+                                <div id="tab-mem-2" class="tabcontent" style="display: block;">
+                                    <div class="member-regis-content">
+                                        <table class="table table-bordered">
+                                            <tbody>
+                                                <tr class="tb-title-row">
+                                                    <td colspan="6">
+                                                        <span>
+                                                            基本情報
+                                                        </span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="width: 120px;" class="bg-gray">
+                                                        <span class="label-required">
+                                                            サイト
+                                                        </span>
+                                                    </td>
+                                                    <td>
+                                                        <select name="" id="" class="form-control">
+                                                            <option value="29">KKDAY</option>
+                                                            <option value="27">Yahooショッピング</option>
+                                                        </select>
+                                                    </td>
+                                                    <td style="width: 120px;" class="bg-gray">
+                                                        <span class="label-required">
+                                                            生年月日
+                                                        </span>
+                                                    </td>
+                                                    <td>
+                                                        <div class="d-flex-center-y">
+                                                            <select name="" id="" class="form-control">
+                                                                <option value="">1997</option>
+                                                            </select>
+                                                            <span>&nbsp;年&nbsp;</span>
+                                                            <select name="" id="" class="form-control">
+                                                                <option value="">01</option>
+                                                            </select>
+                                                            <span>&nbsp;月&nbsp;</span>
+                                                            <select name="" id="" class="form-control">
+                                                                <option value="">01</option>
+                                                            </select>
+                                                            <span>&nbsp;日&nbsp;</span>
+                                                        </div>
+                                                    </td>
+                                                    <td style="width: 110px;" class="bg-gray">
+                                                        <span class="label-required">
+                                                            性別
+                                                        </span>
+                                                    </td>
+                                                    <td>
+                                                        <select name="" id="" class="form-control">
+                                                            <option value="">未指定</option>
+                                                            <option value="">男性</option>
+                                                            <option value="">女性</option>
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="bg-gray">
+                                                        <span>メールアドレス<br>
+                                                            (ログイン ID)
+                                                        </span>
+                                                        <span class="has-tooltip" data-toggle="tooltip" title="<b>退会者のメールについて</b><br><span>退会者のメールには、メールアドレス直後にランダムの英数字が追記されます。</span>">?</span>
+                                                    </td>
+                                                    <td>
+                                                        <table class="table table-fixed table-nested">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td style="width: 95px;">
+                                                                        <span class="label-required">メール</span>
+                                                                    </td>
+                                                                    <td>
+                                                                        <input type="text" name="" id="" class="form-control">
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <span>リターンメール</span>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="d-flex-center-y">
+                                                                            <input type="text" name="" id="" class="form-control">
+                                                                            <span>&nbsp;回&nbsp;</span>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                    <td class="bg-gray">
+                                                        <span class="label-required">パスワード	</span>
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" name="" id="" class="form-control">
+                                                    </td>
+                                                    <td class="bg-gray">
+                                                        <span>メール受信設定</span>
+                                                    </td>
+                                                    <td>
+                                                        <table class="table table-fixed table-nested">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td style="width: 160px;">
+                                                                        <span class="label-required">お知らせメール</span>
+                                                                    </td>
+                                                                    <td>
+                                                                        <select name="" id="" class="form-control">
+                                                                            <option value="">未設定</option>
+                                                                            <option value="Y" selected="">送信する</option>
+                                                                            <option value="N">送信しない</option>
+                                                                        </select>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td style="width: 160px;">
+                                                                        <span class="label-required">サービスに関するメール</span>
+                                                                    </td>
+                                                                    <td>
+                                                                        <select name="" id="" class="form-control">
+                                                                            <option value="">未設定</option>
+                                                                            <option value="Y" selected="">送信する</option>
+                                                                            <option value="N">送信しない</option>
+                                                                        </select>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td style="width: 160px;">
+                                                                        <span class="label-required">ＤＭメール</span>
+                                                                    </td>
+                                                                    <td>
+                                                                        <select name="" id="" class="form-control">
+                                                                            <option value="">未設定</option>
+                                                                            <option value="Y" selected="">送信する</option>
+                                                                            <option value="N">送信しない</option>
+                                                                        </select>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td style="width: 160px;">
+                                                                        <span class="label-required">アンケートメール</span>
+                                                                    </td>
+                                                                    <td>
+                                                                        <select name="" id="" class="form-control">
+                                                                            <option value="">未設定</option>
+                                                                            <option value="Y" selected="">送信する</option>
+                                                                            <option value="N">送信しない</option>
+                                                                        </select>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="bg-gray">
+                                                        <span>お名前<br>
+                                                            (日本語表記)</span>
+                                                    </td>
+                                                    <td>
+                                                        <table class="table table-fixed table-nested">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td style="width: 95px;">
+                                                                        <span class="label-required">姓</span>
+                                                                    </td>
+                                                                    <td>
+                                                                        <input type="text" name="" id="" class="form-control">
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td style="width: 95px;">
+                                                                        <span class="">ミドルネーム</span>
+                                                                    </td>
+                                                                    <td>
+                                                                        <input type="text" name="" id="" class="form-control">
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td style="width: 95px;">
+                                                                        <span class="label-required">名</span>
+                                                                    </td>
+                                                                    <td>
+                                                                        <input type="text" name="" id="" class="form-control">
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                    <td class="bg-gray">
+                                                        <span>	お名前<br>
+                                                            (かな表記)
+                                                        </span>
+                                                    </td>
+                                                    <td>
+                                                        <table class="table table-fixed table-nested">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td style="width: 95px;">
+                                                                        <span class="">姓</span>
+                                                                    </td>
+                                                                    <td>
+                                                                        <input type="text" name="" id="" class="form-control">
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td style="width: 95px;">
+                                                                        <span class="">ミドルネーム</span>
+                                                                    </td>
+                                                                    <td>
+                                                                        <input type="text" name="" id="" class="form-control">
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td style="width: 95px;">
+                                                                        <span class="">名</span>
+                                                                    </td>
+                                                                    <td>
+                                                                        <input type="text" name="" id="" class="form-control">
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                    <td class="bg-gray">
+                                                        <span>お名前<br>
+                                                            (ローマ字表記)
+                                                        </span>
+                                                    </td>
+                                                    <td>
+                                                        <table class="table table-fixed table-nested">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td style="width: 110px;">
+                                                                        <span class="">FAMILY NAME</span>
+                                                                    </td>
+                                                                    <td>
+                                                                        <input type="text" name="" id="" class="form-control">
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td style="width: 110px;">
+                                                                        <span class="">MIDDLE NAME</span>
+                                                                    </td>
+                                                                    <td>
+                                                                        <input type="text" name="" id="" class="form-control">
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td style="width: 110px;">
+                                                                        <span class="">FIRST NAME</span>
+                                                                    </td>
+                                                                    <td>
+                                                                        <input type="text" name="" id="" class="form-control">
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="bg-gray">
+                                                        <span>
+                                                            連絡先
+                                                        </span>
+                                                    </td>
+                                                    <td>
+                                                        <table class="table table-fixed table-nested">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td style="width: 95px;">
+                                                                        <span class="label-required">電話番号</span>
+                                                                    </td>
+                                                                    <td>
+                                                                        <input type="text" name="" id="" class="form-control">
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td style="width: 95px;">
+                                                                        <span class="">固定番号	</span>
+                                                                    </td>
+                                                                    <td>
+                                                                        <input type="text" name="" id="" class="form-control">
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td style="width: 95px;">
+                                                                        <span class="">FAX番号</span>
+                                                                    </td>
+                                                                    <td>
+                                                                        <input type="text" name="" id="" class="form-control">
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td style="width: 95px;">
+                                                                        <span class="">パスポート番号</span>
+                                                                    </td>
+                                                                    <td>
+                                                                        <input type="text" name="" id="" class="form-control">
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td style="width: 95px;">
+                                                                        <span class="">Skype ID</span>
+                                                                    </td>
+                                                                    <td>
+                                                                        <input type="text" name="" id="" class="form-control">
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                    <td class="bg-gray">
+                                                        <span>
+                                                            住所
+                                                        </span>
+                                                    </td>
+                                                    <td>
+                                                        <table class="table table-fixed table-nested">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td style="width: 95px;">
+                                                                        <span class="label-required">在住国	</span>
+                                                                    </td>
+                                                                    <td>
+                                                                        <select name="" id="" class="form-control">
+                                                                            <option value="">アイスランド</option>
+                                                                        </select>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td style="width: 95px;">
+                                                                        <span class="">郵便番号</span>
+                                                                    </td>
+                                                                    <td>
+                                                                        <input type="text" name="" id="" class="form-control">
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td style="width: 95px;">
+                                                                        <span class="">都道府県	</span>
+                                                                    </td>
+                                                                    <td>
+                                                                        <input type="text" name="" id="" class="form-control">
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td style="width: 95px;">
+                                                                        <span class="">市区町村	</span>
+                                                                    </td>
+                                                                    <td>
+                                                                        <input type="text" name="" id="" class="form-control">
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td style="width: 95px;">
+                                                                        <span class="">番地</span>
+                                                                    </td>
+                                                                    <td>
+                                                                        <input type="text" name="" id="" class="form-control">
+                                                                    </td>
+                                                                </tr> 
+                                                                <tr>
+                                                                    <td style="width: 95px;">
+                                                                        <span class="">建物名</span>
+                                                                    </td>
+                                                                    <td>
+                                                                        <input type="text" name="" id="" class="form-control">
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                    <td class="bg-gray">
+                                                        <span>
+                                                            所属企業情報
+                                                        </span>
+                                                    </td>
+                                                    <td>
+                                                        <table class="table table-fixed table-nested">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td style="width: 110px;">
+                                                                        <span class="">企業名</span>
+                                                                    </td>
+                                                                    <td>
+                                                                        <input type="text" name="" id="" class="form-control">
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td style="width: 110px;">
+                                                                        <span class="">所属部門</span>
+                                                                    </td>
+                                                                    <td>
+                                                                        <input type="text" name="" id="" class="form-control">
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td style="width: 110px;">
+                                                                        <span class="">電話番号</span>
+                                                                    </td>
+                                                                    <td>
+                                                                        <input type="text" name="" id="" class="form-control">
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="bg-gray">
+                                                        <span class="label-required">
+                                                            架電注意
+                                                        </span>
+                                                    </td>
+                                                    <td>
+                                                        <select name="" id="" class="form-control">
+                                                            <option value="">OK</option>
+                                                        </select>
+                                                    </td>
+                                                    <td class="bg-gray">
+                                                        <span class="label-required">
+                                                            CRMアプローチ
+                                                        </span>
+                                                    </td>
+                                                    <td>
+                                                        <select name="" id="" class="form-control">
+                                                            <option value="">OK</option>
+                                                        </select>
+                                                    </td>
+                                                    <td class="bg-gray">
+                                                        <span class="">
+                                                            次回割引フラグ
+                                                        </span>
+                                                    </td>
+                                                    <td>
+                                                        <select name="" id="" class="form-control">
+                                                            <option value="">選択</option>
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="bg-gray">
+                                                        <span>携帯キャリア	</span>
+                                                    </td>
+                                                    <td>
+                                                        <select name="" id="" class="form-control">
+                                                            <option value="">未設定</option>
+                                                        </select>
+                                                    </td>
+                                                    <td class="bg-gray">
+                                                        <span>FM顧客ID</span>
+                                                        <span class="has-tooltip" data-toggle="tooltip" title="<b>FM顧客IDについて</b><br><span>入力を反映した場合は、以後変更できません。</span>">?</span>
+                                                    </td>
+                                                    <td colspan="3">
+                                                        <input type="text" name="" id="" class="form-control">
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="bg-gray">
+                                                        <span>備考</span>
+                                                    </td>
+                                                    <td colspan="5">
+                                                        <textarea name="" id="" cols="30" rows="10" class="form-control no-resize cell-note">
+                                                            
+                                                        </textarea>
+                                                    </td>
+                                                </tr>
+                                                <tr class="tb-title-row">
+                                                    <td colspan="6">
+                                                        <span>
+                                                            公開情報
+                                                        </span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="bg-gray">
+                                                        <span>
+                                                            ニックネーム
+                                                        </span>
+                                                    </td>
+                                                    <td colspan="5">
+                                                        <input type="text" name="" id="" class="form-control">
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <div class="text-center group-btn">
+                                            <a href="" class="btn btn-gray">一覧へ</a>
+                                            <a href="" class="btn btn-primary">登録</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="tab-mem-3" class="tabcontent" style="display: none;">
+                                    content3
+                                </div>
+                                <div id="tab-mem-4" class="tabcontent" style="display: none;">
+                                    content4
+                                </div>
+                                <div id="tab-mem-5" class="tabcontent" style="display: none;">
+                                    content5
+                                </div>
+                                <div id="tab-mem-6" class="tabcontent" style="display: none;">
+                                    content6
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tab-4" class="tabcontent" style="display: none;">
+                        <div class="page-title-top">
+                            <p>tab title 4</p>
+                        </div>
+                        <div class="block-content-wrapper">
+                            <div class="block-content">
+                                block content
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tab-5" class="tabcontent" style="display: none;">
+                        <div class="page-title-top">
+                            <p>tab title 5</p>
+                        </div>
+                        <div class="block-content-wrapper">
+                            <div class="block-content">
+                                block content
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tab-6" class="tabcontent" style="display: none;">
+                        <div class="page-title-top">
+                            <p>tab title 6</p>
+                        </div>
+                        <div class="block-content-wrapper">
+                            <div class="block-content">
+                                block content
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tab-7" class="tabcontent" style="display: none;">
+                        <div class="page-title-top">
+                            <p>tab title 7</p>
+                        </div>
+                        <div class="block-content-wrapper">
+                            <div class="block-content">
+                                block content
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-page">
+                    Copyright © 2023 vision-wifi.jp.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="plugins/jquery-1.11.3.min.js"></script>
+    <script src="plugins/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>

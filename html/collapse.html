@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Top</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./plugins/fontawesome/css/all.min.css">
+        <link rel="stylesheet" href="style/css/style.css" type="text/css">
+    </head>
+    <body>
+
+    <div class="wrapper">
+        <div class="header">
+            <div class="header-left">
+                <a href="#">
+                    <img src="./img/sitelogo_login.png" alt="">
+                </a>
+                <span class="logo-text">開発環境</span>
+            </div>
+            <div class="header-right">
+                <div class="dropdown-menu">
+                    <div class="dropdown-btn">
+                        <span class="sBtn-text">ファムヒューフーンさん</span>
+                        &nbsp;<i class="fas fa-caret-down"></i>
+                    </div>
+                  
+                    <ul class="dropdown-content">
+                        <li class="dropdown-item">
+                            <a class="logout" href="#">ログアウト</a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a href="#">
+                                <span>検索条件のリセット</span><br>
+                                <span class="fs-10px text-gray">
+                                    各種一覧画面で検索実行時に、エラーが発生して画面操作ができなくなった場合は、このボタンを押して下さい。現在ログイン中の担当者が検索した全検索条件を消去します。
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="sidebar-container"></div>
+        <div class="main">
+            <div class="page-container">
+                <div class="block-links-direc">
+                    <a class=" active" href="">ホーム</a>
+                    <a class="" href="">コンタクト管理</a>
+                    <a class="" href="">顧客管理</a>
+                    <a class="" href="">出荷管理</a>
+                    <a class="" href="">受注管理</a>
+                    <a class="" href="">障害管理</a>
+                    <a class="" href="">集計</a>
+                    <a class="" href="">アフィリエイト</a>
+                    <a class="" href="">キャンペーン</a>
+                    <a class="" href="">空港システム</a>
+                    <a class="" href="">システム管理</a>
+                </div>
+                <div class="block-tab-top">
+                    <!-- Tab links -->
+                    <div class="tab tab-list bg-blue-default">
+                        <a class="tablinks tab-btn-1 active" onclick="openTab(event, 'tab-1')">ホーム</a>
+                    </div>
+                    <!-- Tab content -->
+                    <div id="tab-1" class="tabcontent" style="display: block;">
+                        <div class="page-title-top">
+                            <p>ホーム</p>
+                        </div>
+                        <div class="block-content-wrapper">
+                            <div class="block-content">
+                                <!-- COLLAPSE -->
+                                <button type="button" class="collapse-toggle">Open Collapsible</button>
+                                <div class="collapse-content">
+                                    <p>Lorem ipsum...</p>
+                                </div>
+                                <!-- END COLLAPSE -->
+
+                                <p style="margin-top: 100px;"></p>
+                                <button type="button" class="notification btn" id="noti-01">Show Notification 1</button>
+                                <button type="button" class="notification btn" id="noti-02">Show Notification 2</button>
+                                <button type="button" class="notification btn" id="noti-03">Show Notification 3</button>
+                                <div class="notification-content">
+                                    <div class="alert alert-success" data-alert="noti-01" style="display: none;">
+                                        <button type="button" class="close">×</button>
+                                        <b>Success!</b> This alert box could indicate a successful or positive action.
+                                    </div>
+                                    <div class="alert alert-danger" data-alert="noti-02" style="display: none;">
+                                        <button type="button" class="close">×</button>
+                                        <b>Danger!</b> This alert box could indicate a dangerous or potentially negative action.
+                                    </div>
+                                    <div class="alert alert-warning" data-alert="noti-03" style="display: none;">
+                                        <button type="button" class="close">×</button>
+                                        <b>Warning!</b>  This alert box could indicate a warning that might need attention.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-page">
+                    Copyright © 2023 vision-wifi.jp.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="plugins/jquery-1.11.3.min.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>

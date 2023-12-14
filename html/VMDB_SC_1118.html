@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>VMDB_SC_1118</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="plugins/fontawesome/css/all.min.css">
+        <link rel="stylesheet" href="plugins/jquery-ui-1.11.4/jquery-ui.min.css">
+        <link rel="stylesheet" href="style/css/style.css" type="text/css">
+    </head>
+    <body>
+
+    <div class="wrapper">
+        <div class="header">
+            <div class="header-left">
+                <a href="#">
+                    <img src="./img/sitelogo_login.png" alt="">
+                </a>
+                <span class="logo-text">開発環境</span>
+            </div>
+            <div class="header-right">
+                <div class="dropdown-menu">
+                    <div class="dropdown-btn">
+                        <span class="sBtn-text">ファムヒューフーンさん</span>
+                        &nbsp;<i class="fas fa-caret-down"></i>
+                    </div>
+                  
+                    <ul class="dropdown-content">
+                        <li class="dropdown-item">
+                            <a class="logout" href="#">ログアウト</a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a href="#">
+                                <span>検索条件のリセット</span><br>
+                                <span class="fs-10px text-gray">
+                                    各種一覧画面で検索実行時に、エラーが発生して画面操作ができなくなった場合は、このボタンを押して下さい。現在ログイン中の担当者が検索した全検索条件を消去します。
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="sidebar-container"></div>
+        <div class="main">
+            <div class="page-container">
+                <div class="block-links-direc">
+                    <a class="" href="">ホーム</a>
+                    <a class="" href="">コンタクト管理</a>
+                    <a class="" href="">顧客管理</a>
+                    <a class="" href="">出荷管理</a>
+                    <a class="" href="">受注管理</a>
+                    <a class="" href="">障害管理</a>
+                    <a class="" href="">集計</a>
+                    <a class="" href="">アフィリエイト</a>
+                    <a class="" href="">キャンペーン</a>
+                    <a class="" href="">空港システム</a>
+                    <a class="active" href="">システム管理</a>
+                </div>
+                <div class="block-tab-top">
+                    <!-- Tab links -->
+                    <div class="tab tab-list bg-blue-default">
+                        <a class="tablinks tab-btn-1" onclick="openTab(event, 'tab-1')">担当者管理</a>
+                        <a class="tablinks tab-btn-2" onclick="openTab(event, 'tab-2')">対応国管理</a>
+                        <a class="tablinks tab-btn-3" onclick="openTab(event, 'tab-3')">周遊国管理</a>
+                        <a class="tablinks tab-btn-4" onclick="openTab(event, 'tab-4')">商材管理</a>
+                        <a class="tablinks tab-btn-5" onclick="openTab(event, 'tab-5')">端末管理</a>
+                        <a class="tablinks tab-btn-6" onclick="openTab(event, 'tab-6')">オプション管理</a>
+                        <a class="tablinks tab-btn-7" onclick="openTab(event, 'tab-7')">オプション長期</a>
+                        <a class="tablinks tab-btn-8" onclick="openTab(event, 'tab-8')">オプションプラン</a>
+                        <a class="tablinks tab-btn-9 active" onclick="openTab(event, 'tab-9')">場所管理</a>
+                        <a class="tablinks tab-btn-10" onclick="openTab(event, 'tab-10')">受取/返却場所管理</a>
+                        <a class="tablinks tab-btn-11" onclick="openTab(event, 'tab-11')">APIキャッシュ管理</a>
+                    </div>
+                    <!-- Tab content -->
+                    <div id="tab-1" class="tabcontent" style="display: none;">
+                        <div class="page-title-top">
+                            <p>tab title 1</p>
+                        </div>
+                        <div class="block-content-wrapper">
+                            <div class="block-content">
+                                block content
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tab-2" class="tabcontent" style="display: none;">
+                        <div class="page-title-top">
+                            <p>tab title 2</p>
+                        </div>
+                        <div class="block-content-wrapper">
+                            <div class="block-content">
+                                block content
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tab-3" class="tabcontent" style="display: none;">
+                        <div class="page-title-top">
+                            <p>tab title 3</p>
+                        </div>
+                        <div class="block-content-wrapper">
+                            <div class="block-content">
+                                block content
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tab-4" class="tabcontent" style="display: none;">
+                        <div class="page-title-top">
+                            <p>tab title 4</p>
+                        </div>
+                        <div class="block-content-wrapper">
+                            <div class="block-content">
+                                block content
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tab-5" class="tabcontent" style="display: none;">
+                        <div class="page-title-top">
+                            <p>tab title 5</p>
+                        </div>
+                        <div class="block-content-wrapper">
+                            <div class="block-content">
+                                block content
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tab-6" class="tabcontent" style="display: none;">
+                        <div class="page-title-top">
+                            <p>tab title 6</p>
+                        </div>
+                        <div class="block-content-wrapper">
+                            <div class="block-content">
+                                block content
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tab-7" class="tabcontent" style="display: none;">
+                        <div class="page-title-top">
+                            <p>tab title 7</p>
+                        </div>
+                        <div class="block-content-wrapper">
+                            <div class="block-content">
+                                block content
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tab-8" class="tabcontent" style="display: none;">
+                        <div class="page-title-top">
+                            <p>tab title 8</p>
+                        </div>
+                        <div class="block-content-wrapper">
+                            <div class="block-content">
+                                block content
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tab-9" class="tabcontent" style="display: block;">
+                        <div class="page-title-top">
+                            <p>場所詳細</p>
+                        </div>
+                        <div class="block-content-wrapper">
+                            <div class="block-content">
+                                <div class="block-search-result w-per-80 m-auto">
+                                    <div class="edit-page-content">
+                                        <table class="table table-bordered">
+                                            <colgroup>
+                                                <col style="width: 80px;">
+                                                <col style="width: 100px;">
+                                                <col style="width: 250px;">
+                                                <col style="width: 170px;">
+                                                <col style="width: 250px;">
+                                            </colgroup>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="bg-gray" colspan="2">ID</td>
+                                                    <td class="">190</td>
+                                                    <td class="bg-gray">地域</td>
+                                                    <td class="">北海道地方</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="bg-gray" colspan="2">場所マスタ</td>
+                                                    <td class="" colspan="3">新千歳空港</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="bg-gray" colspan="2">場所名</td>
+                                                    <td class="">新千歳空港 入国管理前</td>
+                                                    <td class="bg-gray">短縮場所名</td>
+                                                    <td class="">新千歳空港 入国管理前</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="bg-gray" colspan="2">受取用説明</td>
+                                                    <td class=""></td>
+                                                    <td class="bg-gray">返却用説明</td>
+                                                    <td class=""></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="bg-gray" colspan="2">ターミナル</td>
+                                                    <td class=""></td>
+                                                    <td class="bg-gray">ターミナル略称</td>
+                                                    <td class=""></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="bg-gray" colspan="2">カウンタータイプ</td>
+                                                    <td class=""></td>
+                                                    <td class="bg-gray">返却ボックス</td>
+                                                    <td class="">無し</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="bg-gray" colspan="2">状態</td>
+                                                    <td class="">通常</td>
+                                                    <td class="bg-gray">受渡手数料無料</td>
+                                                    <td class="">利用しない</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="bg-gray" colspan="2">受取料金</td>
+                                                    <td class="text-right">0 円</td>
+                                                    <td class="bg-gray">返却料金</td>
+                                                    <td class="">0 円</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="bg-gray" colspan="2">拠点</td>
+                                                    <td class="">国内</td>
+                                                    <td class="bg-gray">タイプ</td>
+                                                    <td class="">空港</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="bg-gray" colspan="2">サイト表示</td>
+                                                    <td class="">表示する</td>
+                                                    <td class="bg-gray">倉庫利用</td>
+                                                    <td class="">利用しない</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="bg-gray" colspan="2">申込期限</td>
+                                                    <td class="">利用する 3日前 15時迄</td>
+                                                    <td class="bg-gray">直前在庫</td>
+                                                    <td class="">利用しない</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="bg-gray" colspan="2">在庫連動</td>
+                                                    <td class="">利用しない	</td>
+                                                    <td class="bg-gray">成田空港判別</td>
+                                                    <td class="">無効</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="bg-gray" colspan="2">事前受取最大期間</td>
+                                                    <td colspan="3">
+                                                        通常:0日 エンタープライズ:0日
+                                                        <span class="text-red">※0は無効と同等</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="bg-gray" colspan="2">受取営業時間制御</td>
+                                                    <td colspan="3"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="bg-gray" colspan="2">返却営業時間制御</td>
+                                                    <td colspan="3"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="bg-gray" colspan="2">出荷場所</td>
+                                                    <td class="">ハマキョウ柏</td>
+                                                    <td class="bg-gray">不備チェック</td>
+                                                    <td class=""></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="bg-gray" rowspan="3">サイト制御</td>
+                                                    <td class="bg-gray">利用サイト-受取</td>
+                                                    <td colspan="3">GLOBAL WiFi, JCB, RAKUTEN GLOBAL WiFi</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="bg-gray">利用サイト-返却</td>
+                                                    <td colspan="3">GLOBAL WiFi, JCB, RAKUTEN GLOBAL WiFi</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="bg-gray">フォーム遷移</td>
+                                                    <td colspan="3">無効</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="bg-gray" colspan="2">VMBS利用</td>
+                                                    <td class="">利用する</td>
+                                                    <td class="bg-gray">受取時説明対応</td>
+                                                    <td class="">無し</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="bg-gray" colspan="2">備考</td>
+                                                    <td colspan="3"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="bg-gray" colspan="2">受取時間帯</td>
+                                                    <td class="">あり(必須)	</td>
+                                                    <td class="bg-gray">返却時間帯	</td>
+                                                    <td class="">無し</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="bg-gray" colspan="2">登録日付</td>
+                                                    <td class="">2013/08/09 14:31</td>
+                                                    <td class="bg-gray">更新日時</td>
+                                                    <td class="">2013/08/09 14:31</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="bg-gray" colspan="2">siteID</td>
+                                                    <td class="">1</td>
+                                                    <td class="bg-gray">表示順</td>
+                                                    <td class="">191</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="bg-gray" colspan="2">エラー文言</td>
+                                                    <td class=""></td>
+                                                    <td class="bg-gray">出荷予定日算出ルール</td>
+                                                    <td class=""></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="bg-gray" colspan="2">出荷運送業者</td>
+                                                    <td class="">ヤマト</td>
+                                                    <td class="bg-gray">PDFを出力する枚数</td>
+                                                    <td class="">0</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="bg-gray" colspan="2">直前申込時在庫システム</td>
+                                                    <td class="">0</td>
+                                                    <td class="bg-gray">サイト側に表示するメッセージ管理</td>
+                                                    <td class=""></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="bg-gray" colspan="2">ロッカー連携</td>
+                                                    <td class="">利用しない</td>
+                                                    <td class="bg-gray">デフォルト返却場所</td>
+                                                    <td class=""></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="bg-gray" colspan="2">地図画像URL</td>
+                                                    <td class=""></td>
+                                                    <td class="bg-gray">返却用地図画像URL</td>
+                                                    <td class=""></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="bg-gray" colspan="2">地図リンク先URL</td>
+                                                    <td class=""></td>
+                                                    <td class="bg-gray">地図リンク先URL：返却用</td>
+                                                    <td class=""></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="bg-gray" colspan="2">カウンター画像URL</td>
+                                                    <td class=""></td>
+                                                    <td class="bg-gray">QRメール用：画像URL</td>
+                                                    <td class=""></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="bg-gray" colspan="2">HTMLメール用：注釈</td>
+                                                    <td class=""></td>
+                                                    <td class="bg-gray">取扱冊子の必要有無</td>
+                                                    <td class="">0</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="bg-gray" colspan="2">空港受注上限数</td>
+                                                    <td class=""></td>
+                                                    <td class="bg-gray">空港混雑アラートメッセージ</td>
+                                                    <td class=""></td>
+                                                </tr>                                                
+                                            </tbody>
+                                        </table>
+                                        <div class="text-center group-btn">
+                                            <a href="" class="btn btn-gray">一覧へ</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tab-10" class="tabcontent" style="display: none;">
+                        <div class="page-title-top">
+                            <p>tab title 10</p>
+                        </div>
+                        <div class="block-content-wrapper">
+                            <div class="block-content">
+                                block content
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tab-11" class="tabcontent" style="display: none;">
+                        <div class="page-title-top">
+                            <p>tab title 11</p>
+                        </div>
+                        <div class="block-content-wrapper">
+                            <div class="block-content">
+                                block content
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-page">
+                    Copyright © 2023 vision-wifi.jp.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="plugins/jquery-1.11.3.min.js"></script>
+    <script src="plugins/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>

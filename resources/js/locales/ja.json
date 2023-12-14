@@ -1,0 +1,5 @@
+{
+    "validate": {
+        "required": "{label}を入力してください。"
+    }
+}

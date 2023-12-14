@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>VMDB_SC_1110</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="plugins/fontawesome/css/all.min.css">
+        <link rel="stylesheet" href="plugins/jquery-ui-1.11.4/jquery-ui.min.css">
+        <link rel="stylesheet" href="style/css/style.css" type="text/css">
+    </head>
+    <body>
+
+    <div class="wrapper">
+        <div class="header">
+            <div class="header-left">
+                <a href="#">
+                    <img src="./img/sitelogo_login.png" alt="">
+                </a>
+                <span class="logo-text">開発環境</span>
+            </div>
+            <div class="header-right">
+                <div class="dropdown-menu">
+                    <div class="dropdown-btn">
+                        <span class="sBtn-text">ファムヒューフーンさん</span>
+                        &nbsp;<i class="fas fa-caret-down"></i>
+                    </div>
+                  
+                    <ul class="dropdown-content">
+                        <li class="dropdown-item">
+                            <a class="logout" href="#">ログアウト</a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a href="#">
+                                <span>検索条件のリセット</span><br>
+                                <span class="fs-10px text-gray">
+                                    各種一覧画面で検索実行時に、エラーが発生して画面操作ができなくなった場合は、このボタンを押して下さい。現在ログイン中の担当者が検索した全検索条件を消去します。
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="sidebar-container"></div>
+        <div class="main">
+            <div class="page-container">
+                <div class="block-links-direc">
+                    <a class="" href="">ホーム</a>
+                    <a class="" href="">コンタクト管理</a>
+                    <a class="" href="">顧客管理</a>
+                    <a class="" href="">出荷管理</a>
+                    <a class="" href="">受注管理</a>
+                    <a class="" href="">障害管理</a>
+                    <a class="" href="">集計</a>
+                    <a class="" href="">アフィリエイト</a>
+                    <a class="" href="">キャンペーン</a>
+                    <a class="" href="">空港システム</a>
+                    <a class="active" href="">システム管理</a>
+                </div>
+                <div class="block-tab-top">
+                    <!-- Tab links -->
+                    <div class="tab tab-list bg-blue-default">
+                        <a class="tablinks tab-btn-1" onclick="openTab(event, 'tab-1')">担当者管理</a>
+                        <a class="tablinks tab-btn-2" onclick="openTab(event, 'tab-2')">対応国管理</a>
+                        <a class="tablinks tab-btn-3" onclick="openTab(event, 'tab-3')">周遊国管理</a>
+                        <a class="tablinks tab-btn-4" onclick="openTab(event, 'tab-4')">商材管理</a>
+                        <a class="tablinks tab-btn-5 active" onclick="openTab(event, 'tab-5')">端末管理</a>
+                        <a class="tablinks tab-btn-6" onclick="openTab(event, 'tab-6')">オプション管理</a>
+                        <a class="tablinks tab-btn-7" onclick="openTab(event, 'tab-7')">オプション長期</a>
+                        <a class="tablinks tab-btn-8" onclick="openTab(event, 'tab-8')">オプションプラン</a>
+                        <a class="tablinks tab-btn-9" onclick="openTab(event, 'tab-9')">場所管理</a>
+                        <a class="tablinks tab-btn-10" onclick="openTab(event, 'tab-10')">受取/返却場所管理</a>
+                        <a class="tablinks tab-btn-11" onclick="openTab(event, 'tab-11')">APIキャッシュ管理</a>
+                    </div>
+                    <!-- Tab content -->
+                    <div id="tab-1" class="tabcontent" style="display: none;">
+                        <div class="page-title-top">
+                            <p>tab title 1</p>
+                        </div>
+                        <div class="block-content-wrapper">
+                            <div class="block-content">
+                                block content
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tab-2" class="tabcontent" style="display: none;">
+                        <div class="page-title-top">
+                            <p>tab title 2</p>
+                        </div>
+                        <div class="block-content-wrapper">
+                            <div class="block-content">
+                                block content
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tab-3" class="tabcontent" style="display: none;">
+                        <div class="page-title-top">
+                            <p>tab title 3</p>
+                        </div>
+                        <div class="block-content-wrapper">
+                            <div class="block-content">
+                                block content
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tab-4" class="tabcontent" style="display: none;">
+                        <div class="page-title-top">
+                            <p>tab title 4</p>
+                        </div>
+                        <div class="block-content-wrapper">
+                            <div class="block-content">
+                                block content
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tab-5" class="tabcontent" style="display: block;">
+                        <div class="page-title-top">
+                            <p>端末基本情報詳細</p>
+                        </div>
+                        <div class="block-content-wrapper">
+                            <div class="block-content">
+                                <div class="block-search-result w-per-60 m-auto">
+                                    <div class="edit-page-content">
+                                        <table class="table table-bordered">
+                                            <colgroup>
+                                                <col style="width: 170px;">
+                                                <col style="">
+                                            </colgroup>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="bg-gray">ID</td>
+                                                    <td>67</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="bg-gray">商品コード</td>
+                                                    <td>UCloudlink_U3</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="bg-gray">メーカー</td>
+                                                    <td>UCloudlink</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="bg-gray">商品名</td>
+                                                    <td>U3</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="bg-gray">端末区分</td>
+                                                    <td>セット</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="bg-gray">備考</td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="bg-gray">対応国</td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr class="tb-title-row">
+                                                    <td colspan="2">担当者情報</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="bg-gray">登録担当者</td>
+                                                    <td>システム管理者W</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="bg-gray">登録日付</td>
+                                                    <td>2014/12/17 02:15</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="bg-gray">更新担当者</td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="bg-gray">更新日付</td>
+                                                    <td>2020/06/02 17:48</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <div class="text-center group-btn">
+                                            <a href="" class="btn btn-gray">一覧へ</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tab-6" class="tabcontent" style="display: none;">
+                        <div class="page-title-top">
+                            <p>tab title 6</p>
+                        </div>
+                        <div class="block-content-wrapper">
+                            <div class="block-content">
+                                block content
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tab-7" class="tabcontent" style="display: none;">
+                        <div class="page-title-top">
+                            <p>tab title 7</p>
+                        </div>
+                        <div class="block-content-wrapper">
+                            <div class="block-content">
+                                block content
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tab-8" class="tabcontent" style="display: none;">
+                        <div class="page-title-top">
+                            <p>tab title 8</p>
+                        </div>
+                        <div class="block-content-wrapper">
+                            <div class="block-content">
+                                block content
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tab-9" class="tabcontent" style="display: none;">
+                        <div class="page-title-top">
+                            <p>tab title 9</p>
+                        </div>
+                        <div class="block-content-wrapper">
+                            <div class="block-content">
+                                block content
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tab-10" class="tabcontent" style="display: none;">
+                        <div class="page-title-top">
+                            <p>tab title 10</p>
+                        </div>
+                        <div class="block-content-wrapper">
+                            <div class="block-content">
+                                block content
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tab-11" class="tabcontent" style="display: none;">
+                        <div class="page-title-top">
+                            <p>tab title 11</p>
+                        </div>
+                        <div class="block-content-wrapper">
+                            <div class="block-content">
+                                block content
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-page">
+                    Copyright © 2023 vision-wifi.jp.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="plugins/jquery-1.11.3.min.js"></script>
+    <script src="plugins/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>

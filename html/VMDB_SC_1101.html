@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>VMDB_SC_1101</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="plugins/fontawesome/css/all.min.css">
+        <link rel="stylesheet" href="plugins/jquery-ui-1.11.4/jquery-ui.min.css">
+        <link rel="stylesheet" href="style/css/style.css" type="text/css">
+    </head>
+    <body>
+
+    <div class="wrapper">
+        <div class="header">
+            <div class="header-left">
+                <a href="#">
+                    <img src="./img/sitelogo_login.png" alt="">
+                </a>
+                <span class="logo-text">開発環境</span>
+            </div>
+            <div class="header-right">
+                <div class="dropdown-menu">
+                    <div class="dropdown-btn">
+                        <span class="sBtn-text">ファムヒューフーンさん</span>
+                        &nbsp;<i class="fas fa-caret-down"></i>
+                    </div>
+                  
+                    <ul class="dropdown-content">
+                        <li class="dropdown-item">
+                            <a class="logout" href="#">ログアウト</a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a href="#">
+                                <span>検索条件のリセット</span><br>
+                                <span class="fs-10px text-gray">
+                                    各種一覧画面で検索実行時に、エラーが発生して画面操作ができなくなった場合は、このボタンを押して下さい。現在ログイン中の担当者が検索した全検索条件を消去します。
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="sidebar-container"></div>
+        <div class="main">
+            <div class="page-container">
+                <div class="block-links-direc">
+                    <a class="" href="">ホーム</a>
+                    <a class="" href="">コンタクト管理</a>
+                    <a class="" href="">顧客管理</a>
+                    <a class="" href="">出荷管理</a>
+                    <a class="" href="">受注管理</a>
+                    <a class="" href="">障害管理</a>
+                    <a class="" href="">集計</a>
+                    <a class="" href="">アフィリエイト</a>
+                    <a class="" href="">キャンペーン</a>
+                    <a class="" href="">空港システム</a>
+                    <a class="active" href="">システム管理</a>
+                </div>
+                <div class="block-tab-top">
+                    <!-- Tab links -->
+                    <div class="tab tab-list bg-blue-default">
+                        <a class="tablinks tab-btn-1 active" onclick="openTab(event, 'tab-1')">担当者管理</a>
+                        <a class="tablinks tab-btn-2" onclick="openTab(event, 'tab-2')">対応国管理</a>
+                        <a class="tablinks tab-btn-3" onclick="openTab(event, 'tab-3')">周遊国管理</a>
+                        <a class="tablinks tab-btn-4" onclick="openTab(event, 'tab-4')">商材管理</a>
+                        <a class="tablinks tab-btn-5" onclick="openTab(event, 'tab-5')">端末管理</a>
+                        <a class="tablinks tab-btn-6" onclick="openTab(event, 'tab-6')">オプション管理</a>
+                        <a class="tablinks tab-btn-7" onclick="openTab(event, 'tab-7')">オプション長期</a>
+                        <a class="tablinks tab-btn-8" onclick="openTab(event, 'tab-8')">オプションプラン</a>
+                        <a class="tablinks tab-btn-9" onclick="openTab(event, 'tab-9')">場所管理</a>
+                        <a class="tablinks tab-btn-10" onclick="openTab(event, 'tab-10')">受取/返却場所管理</a>
+                        <a class="tablinks tab-btn-11" onclick="openTab(event, 'tab-11')">APIキャッシュ管理</a>
+                    </div>
+                    <!-- Tab content -->
+                    <div id="tab-1" class="tabcontent" style="display: block;">
+                        <div class="page-title-top">
+                            <p>担当者一覧</p>
+                            <div>
+                                <a href="" class="btn btn-primary">新規登録</a>
+                            </div>
+                        </div>
+                        <div class="block-content-wrapper">
+                            <div class="block-content">
+                                <div class="block-group-search">
+                                    <div class="search-row">
+                                        <div class="field-search">
+                                            <label for="001" class="label-control">ログインID</label>
+                                            <div class="field-search-input">
+                                                <input type="text" class="form-control" name="" id="001">
+                                            </div>
+                                        </div>
+                                        <div class="field-search">
+                                            <label for="002" class="label-control label-xl">メールアドレス</label>
+                                            <div class="field-search-input">
+                                                <input type="text" class="form-control" name="" id="002">
+                                            </div>
+                                        </div>
+                                        <div class="field-search">
+                                            <label for="003" class="label-control label-xl-small-device">部署</label>
+                                            <div class="field-search-input">
+                                                <select name="" id="003" class="form-control">
+                                                    <option value="">選択</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="field-search">
+                                            <label for="004" class="label-control label-xl-small-device">状態</label>
+                                            <div class="field-search-input">
+                                                <select name="" id="004" class="form-control">
+                                                    <option value="">選択</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="field-search">
+                                            <label for="005" class="label-control">一覧表示</label>
+                                            <div class="field-search-input">
+                                                <select name="" id="005" class="form-control">
+                                                    <option value="">選択</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="field-search field-2w">
+                                            <label class="label-control label-xl-small-device">ログイン日	</label>
+                                            <div class="field-search-input">
+                                                <input type="text" class="form-control" name="" id="006" placeholder="">
+                                                <span>&nbsp;&nbsp;~&nbsp;&nbsp;</span>
+                                                <input type="text" class="form-control" name="" id="007" placeholder="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="search-row">
+                                        <div class="field-search">
+                                            <label for="008" class="label-control">名前</label>
+                                            <div class="field-search-input">
+                                                <input type="text" class="form-control" name="" id="008">
+                                            </div>
+                                        </div>
+                                        <div class="field-search">
+                                            <label for="009" class="label-control label-xl">フリガナ</label>
+                                            <div class="field-search-input">
+                                                <input type="text" class="form-control" name="" id="009">
+                                            </div>
+                                        </div>
+                                        <div class="field-search">
+                                            <label for="0010" class="label-control label-xl-small-device">権限</label>
+                                            <div class="field-search-input">
+                                                <select name="" id="0010" class="form-control">
+                                                    <option value="">選択</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="field-search">
+                                            <label for="0011" class="label-control label-xl-small-device">IP制限</label>
+                                            <div class="field-search-input">
+                                                <select name="" id="0011" class="form-control">
+                                                    <option value="">選択</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="field-search">
+                                            <label for="0012" class="label-control">サイト</label>
+                                            <div class="field-search-input">
+                                                <select name="" id="0012" class="form-control">
+                                                    <option value="">選択</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="field-search field-2w field-mobile-3w">
+                                            <div class="field-search-input justify-content-end">
+                                                <a href="" class="btn btn-black">
+                                                    <i class="fas fa-search"></i>&nbsp;&nbsp;&nbsp;
+                                                    <span>検索</span>
+                                                </a>
+                                                <a href="" class="btn btn-gray">クリア</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="block-search-result">
+                                    <div class="search-result-top">
+                                        <div class="search-result-title">
+                                            該当：915件
+                                        </div>
+                                        <div class="d-flex-center-y">
+                                            <select id="001xx" class="form-control flex-1">
+                                                <option value="">ログイン新順</option>
+                                            </select>
+                                            <label for="002xx" class="label-control">表示数</label>
+                                            <select id="002xx" class="form-control flex-1">
+                                                <option value="">15件</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="search-result-table">
+                                        <table class="table table-bordered table-fixed">
+                                            <colgroup>
+                                                <col style="width: 180px;">
+                                                <col style="width: 180px;">
+                                                <col style="width: 180px;">
+                                                <col style="width: 180px;">
+                                                <col style="width: 100px;">
+                                                <col style="width: 120px;">
+                                                <col style="width: 60px;">
+                                                <col style="width: 60px;">
+                                                <col style="width: 140px;">
+                                                <col style="width: 140px;">
+                                                <col style="width: 80px;">
+                                            </colgroup>
+                                            <thead>
+                                                <tr class="bg-gray text-center">
+                                                    <td>ログインID</td>
+                                                    <td>名前</td>
+                                                    <td>フリガナ</td>
+                                                    <td>メールアドレス</td>
+                                                    <td>部署</td>
+                                                    <td>権限</td>
+                                                    <td>状態</td>
+                                                    <td>IP制限</td>
+                                                    <td>登録日時</td>
+                                                    <td>最終ログイン</td>
+                                                    <td>詳細</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="">150048</td>
+                                                    <td class="">ファムヒューフーン</td>
+                                                    <td class="">ファムヒューフーン</td>
+                                                    <td class="">p_pham@vision-net.co.jp</td>
+                                                    <td class="text-center">東京</td>
+                                                    <td class="text-center">グランドマスター</td>
+                                                    <td class="text-center text-blue">通常</td>
+                                                    <td class="text-center text-blue">有効</td>
+                                                    <td class="">2022/12/28 16:46</td>
+                                                    <td class="">2023/06/07 15:24</td>
+                                                    <td class="text-center"><a href="#" class="btn btn-primary">詳細</a></td>
+                                                </tr>
+                                                <tr class="bg-gray">
+                                                    <td class="">150048</td>
+                                                    <td class="">ファムヒューフーン</td>
+                                                    <td class="">ファムヒューフーン</td>
+                                                    <td class="">p_pham@vision-net.co.jp</td>
+                                                    <td class="text-center">東京</td>
+                                                    <td class="text-center">グランドマスター</td>
+                                                    <td class="text-center text-blue">通常</td>
+                                                    <td class="text-center text-blue">有効</td>
+                                                    <td class="">2022/12/28 16:46</td>
+                                                    <td class="">2023/06/07 15:24</td>
+                                                    <td class="text-center"><a href="#" class="btn btn-primary">詳細</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="">150048</td>
+                                                    <td class="">ファムヒューフーン</td>
+                                                    <td class="">ファムヒューフーン</td>
+                                                    <td class="">p_pham@vision-net.co.jp</td>
+                                                    <td class="text-center">東京</td>
+                                                    <td class="text-center">グランドマスター</td>
+                                                    <td class="text-center text-blue">通常</td>
+                                                    <td class="text-center text-blue">有効</td>
+                                                    <td class="">2022/12/28 16:46</td>
+                                                    <td class="">2023/06/07 15:24</td>
+                                                    <td class="text-center"><a href="#" class="btn btn-primary">詳細</a></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="search-pagination">
+                                        <p class="search-result-title">
+                                            <span>1〜15</span>
+                                            &nbsp;/&nbsp;
+                                            <span>9,591件</span>
+                                        </p>
+                                        <div class="pagi">
+                                            <ul id="componentContainer" class="pagination-container">
+                                                <li>
+                                                    <button href="" class="back-button paginate-buttons">
+                                                    <a><i class="fas fa-chevron-left"></i></a>
+                                                    </button>
+                                                </li>
+                                                <li>
+                                                    <button href="" class="paginate-buttons number-buttons active-page">1</button>
+                                                </li>
+                                                <li>
+                                                    <button href="" class="paginate-buttons number-buttons">2</button>
+                                                </li>
+                                                <li>
+                                                    <button href="" class="paginate-buttons number-buttons">3</button>
+                                                </li>
+                                                <li>
+                                                    <button href="" class="paginate-buttons number-buttons">4</button>
+                                                </li>
+                                                <li>
+                                                    <button href="" class="paginate-buttons number-buttons">5</button>
+                                                </li>
+                                                <li>
+                                                    <button href="" class="ending-breakpoint-button paginate-buttons">...</button>
+                                                </li>
+                                                <li>
+                                                    <button href="" class="last-button paginate-buttons">207</button>
+                                                </li>
+                                                <li>
+                                                    <button href="" class="paginate-buttons next-button">
+                                                    <a><i class="fas fa-chevron-right"></i></a>
+                                                    </button>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="search-result-table mt-70px mb-20px">
+                                        <table class="table table-bordered table-fixed">
+                                            <colgroup>
+                                                <col style="width: 120px;">
+                                                <col style="">
+                                                <col style="">
+                                                <col style="">
+                                                <col style="">
+                                                <col style="">
+                                                <col style="">
+                                                <col style="">
+                                                <col style="">
+                                                <col style="">
+                                                <col style="">
+                                            </colgroup>
+                                            <thead>
+                                                <tr class="bg-gray text-center">
+                                                    <td>横軸：メニュー名<br>
+                                                        縦軸：権限名
+                                                    </td>
+                                                    <td>コンタクト</td>
+                                                    <td>顧客一覧</td>
+                                                    <td>顧客詳細</td>
+                                                    <td>出荷管理</td>
+                                                    <td>受注一覧</td>
+                                                    <td>受注詳細</td>
+                                                    <td>障害管理</td>
+                                                    <td>集計</td>
+                                                    <td>アフィリ<br>
+                                                        エイト
+                                                    </td>
+                                                    <td>ダウン<br>
+                                                        ロード
+                                                    </td>
+                                                    <td>仮死フラグ<br>
+                                                        (一覧表示制御)
+                                                    </td>
+                                                    <td>申込<br>
+                                                        停止情報
+                                                    </td>
+                                                    <td>システム<br>
+                                                        管理
+                                                    </td>
+                                                    <td>空港<br>
+                                                        システム
+                                                    </td>
+                                                    <td>Q&A</td>
+                                                    <td>イベカレ<br>
+                                                        編集
+                                                    </td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="text-center">
+                                                    <td class="bg-gray">パートナー</td>
+                                                    <td>×</td>
+                                                    <td>
+                                                        △<br>
+                                                        <span class="fs-10px">
+                                                            アンケート<br>
+                                                            のみ 閲覧可
+                                                        </span>
+                                                    </td>
+                                                    <td>×</td>
+                                                    <td>×</td>
+                                                    <td>
+                                                        △<br>
+                                                        <span class="fs-10px">
+                                                            顧客情報<br>
+                                                            以外 閲覧可	
+                                                        </span>
+                                                    </td>
+                                                    <td>×</td>
+                                                    <td>×</td>
+                                                    <td>×</td>
+                                                    <td>○</td>
+                                                    <td>×</td>
+                                                    <td>×</td>
+                                                    <td>
+                                                        △<br>
+                                                        <span class="fs-10px">
+                                                            閲覧のみ	
+                                                        </span>
+                                                    </td>
+                                                    <td>×</td>
+                                                    <td>×</td>
+                                                    <td>○</td>
+                                                    <td class="text-center" rowspan="15">
+                                                        中澤 篤<br><br>佐藤 千絵子<br><br>加藤 幸<br><br>山本 咲
+                                                    </td>
+                                                </tr>
+                                                <tr class="text-center">
+                                                    <td class="bg-gray">CCオペレーター</td>
+                                                    <td>○</td>
+                                                    <td>○</td>
+                                                    <td>○</td>
+                                                    <td>○</td>
+                                                    <td>○</td>
+                                                    <td>○</td>
+                                                    <td>○</td>
+                                                    <td>×</td>
+                                                    <td>○</td>
+                                                    <td>×</td>
+                                                    <td>×</td>
+                                                    <td>
+                                                        △<br>
+                                                        <span class="fs-10px">
+                                                            閲覧のみ	
+                                                        </span>
+                                                    </td>
+                                                    <td>×</td>
+                                                    <td>×</td>
+                                                    <td>○</td>
+                                                </tr>
+                                                <tr class="text-center">
+                                                    <td class="bg-gray">業務</td>
+                                                    <td>○</td>
+                                                    <td>○</td>
+                                                    <td>○</td>
+                                                    <td>○</td>
+                                                    <td>○</td>
+                                                    <td>○</td>
+                                                    <td>○</td>
+                                                    <td>×</td>
+                                                    <td>×</td>
+                                                    <td>
+                                                        △<br>
+                                                        <span class="fs-10px">
+                                                            アンケート<br>
+                                                            のみ DL可		
+                                                        </span>
+                                                    </td>
+                                                    <td>×</td>
+                                                    <td>
+                                                        △<br>
+                                                        <span class="fs-10px">
+                                                            閲覧のみ	
+                                                        </span>
+                                                    </td>
+                                                    <td>×</td>
+                                                    <td>×</td>
+                                                    <td>○</td>
+                                                </tr>
+                                                <tr class="text-center">
+                                                    <td class="bg-gray">ボードメンバー</td>
+                                                    <td>×</td>
+                                                    <td>
+                                                        △<br>
+                                                        <span class="fs-10px">
+                                                            アンケート<br>
+                                                            のみ 閲覧可
+                                                        </span>
+                                                    </td>
+                                                    <td>×</td>
+                                                    <td>×</td>
+                                                    <td>
+                                                        △<br>
+                                                        <span class="fs-10px">
+                                                            顧客情報<br>
+                                                            以外 閲覧可	
+                                                        </span>
+                                                    </td>
+                                                    <td>×</td>
+                                                    <td>×</td>
+                                                    <td>○</td>
+                                                    <td>×</td>
+                                                    <td>×</td>
+                                                    <td>×</td>
+                                                    <td>
+                                                        △<br>
+                                                        <span class="fs-10px">
+                                                            閲覧のみ	
+                                                        </span>
+                                                    </td>
+                                                    <td>×</td>
+                                                    <td>×</td>
+                                                    <td>○</td>
+                                                </tr>
+                                                <tr class="text-center">
+                                                    <td class="bg-gray">空港スタッフ</td>
+                                                    <td>○</td>
+                                                    <td>○</td>
+                                                    <td>○</td>
+                                                    <td>○</td>
+                                                    <td>○</td>
+                                                    <td>○</td>
+                                                    <td>○</td>
+                                                    <td>
+                                                        △<br>
+                                                        <span class="fs-10px">
+                                                            申込場所・<br>
+                                                            受取場所<br>
+                                                            のみ 閲覧可		
+                                                        </span>
+                                                    </td>
+                                                    <td>○</td>
+                                                    <td>×</td>
+                                                    <td>×</td>
+                                                    <td>
+                                                        △<br>
+                                                        <span class="fs-10px">
+                                                            閲覧のみ	
+                                                        </span>
+                                                    </td>
+                                                    <td>×</td>
+                                                    <td>×</td>
+                                                    <td>○</td>
+                                                </tr>
+                                                <tr class="text-center">
+                                                    <td class="bg-gray">空港マスター</td>
+                                                    <td>○</td>
+                                                    <td>○</td>
+                                                    <td>○</td>
+                                                    <td>○</td>
+                                                    <td>○</td>
+                                                    <td>○</td>
+                                                    <td>○</td>
+                                                    <td>○</td>
+                                                    <td>○</td>
+                                                    <td>○</td>
+                                                    <td>×</td>
+                                                    <td>
+                                                        △<br>
+                                                        <span class="fs-10px">
+                                                            閲覧のみ	
+                                                        </span>
+                                                    </td>
+                                                    <td>×</td>
+                                                    <td>○</td>
+                                                    <td>○</td>
+                                                </tr>
+                                                <tr class="text-center">
+                                                    <td class="bg-gray">営業</td>
+                                                    <td>○</td>
+                                                    <td>○</td>
+                                                    <td>○</td>
+                                                    <td>×</td>
+                                                    <td>○</td>
+                                                    <td>○</td>
+                                                    <td>○</td>
+                                                    <td>○</td>
+                                                    <td>○</td>
+                                                    <td>×</td>
+                                                    <td>×</td>
+                                                    <td>
+                                                        △<br>
+                                                        <span class="fs-10px">
+                                                            閲覧のみ	
+                                                        </span>
+                                                    </td>
+                                                    <td>×</td>
+                                                    <td>○</td>
+                                                    <td>○</td>
+                                                </tr>
+                                                <tr class="text-center">
+                                                    <td class="bg-gray">営業事務</td>
+                                                    <td>○</td>
+                                                    <td>○</td>
+                                                    <td>○</td>
+                                                    <td>×</td>
+                                                    <td>○</td>
+                                                    <td>○</td>
+                                                    <td>○</td>
+                                                    <td>○</td>
+                                                    <td>
+                                                        ○<br>
+                                                        <span class="fs-10px">
+                                                            +企業請求情報<br>
+                                                            の変更承認	
+                                                        </span>
+                                                    </td>
+                                                    <td>×</td>
+                                                    <td>×</td>
+                                                    <td>
+                                                        △<br>
+                                                        <span class="fs-10px">
+                                                            閲覧のみ	
+                                                        </span>
+                                                    </td>
+                                                    <td>×</td>
+                                                    <td>×</td>
+                                                    <td>○</td>
+                                                </tr>
+                                                <tr class="text-center">
+                                                    <td class="bg-gray">マーケター</td>
+                                                    <td>○</td>
+                                                    <td>○</td>
+                                                    <td>○</td>
+                                                    <td>○</td>
+                                                    <td>○</td>
+                                                    <td>○</td>
+                                                    <td>○</td>
+                                                    <td>○</td>
+                                                    <td>○</td>
+                                                    <td>○</td>
+                                                    <td>×</td>
+                                                    <td>
+                                                        △<br>
+                                                        <span class="fs-10px">
+                                                            閲覧のみ	
+                                                        </span>
+                                                    </td>
+                                                    <td>×</td>
+                                                    <td>×</td>
+                                                    <td>○</td>
+                                                </tr>
+                                                <tr class="text-center">
+                                                    <td class="bg-gray">マーケCP</td>
+                                                    <td>○</td>
+                                                    <td>○</td>
+                                                    <td>○</td>
+                                                    <td>○</td>
+                                                    <td>○</td>
+                                                    <td>○</td>
+                                                    <td>○</td>
+                                                    <td>○</td>
+                                                    <td>
+                                                        ○<br>
+                                                        <span class="fs-10px">
+                                                            +キャンペーンCSV<br>
+                                                            端末料金設定	
+                                                        </span>
+                                                    </td>
+                                                    <td>○</td>
+                                                    <td>×</td>
+                                                    <td>
+                                                        △<br>
+                                                        <span class="fs-10px">
+                                                            閲覧のみ	
+                                                        </span>
+                                                    </td>
+                                                    <td>×</td>
+                                                    <td>×</td>
+                                                    <td>○</td>
+                                                </tr>
+                                                <tr class="text-center">
+                                                    <td class="bg-gray">SV</td>
+                                                    <td>○</td>
+                                                    <td>○</td>
+                                                    <td>○</td>
+                                                    <td>○</td>
+                                                    <td>○</td>
+                                                    <td>
+                                                        ○<br>
+                                                        <span class="fs-10px">
+                                                            +料金承認権限<br>
+                                                            +ステータス変更	
+                                                        </span>
+                                                    </td>
+                                                    <td>○</td>
+                                                    <td>○</td>
+                                                    <td>○</td>
+                                                    <td>○</td>
+                                                    <td>×</td>
+                                                    <td>
+                                                        △<br>
+                                                        <span class="fs-10px">
+                                                            閲覧のみ	
+                                                        </span>
+                                                    </td>
+                                                    <td>×</td>
+                                                    <td>×</td>
+                                                    <td>○</td>
+                                                </tr>
+                                                <tr class="text-center">
+                                                    <td class="bg-gray">請求担当</td>
+                                                    <td>○</td>
+                                                    <td>○</td>
+                                                    <td>○</td>
+                                                    <td>○</td>
+                                                    <td>○</td>
+                                                    <td>
+                                                        ○<br>
+                                                        <span class="fs-10px">
+                                                            +確定料金手動権限<br>
+                                                            +料金承認権限	
+                                                        </span>
+                                                    </td>
+                                                    <td>○</td>
+                                                    <td>×</td>
+                                                    <td>○</td>
+                                                    <td>○</td>
+                                                    <td>×</td>
+                                                    <td>
+                                                        △<br>
+                                                        <span class="fs-10px">
+                                                            閲覧のみ	
+                                                        </span>
+                                                    </td>
+                                                    <td>×</td>
+                                                    <td>×</td>
+                                                    <td>○</td>
+                                                </tr>
+                                                <tr class="text-center">
+                                                    <td class="bg-gray">在庫マスター</td>
+                                                    <td>○</td>
+                                                    <td>○</td>
+                                                    <td>○</td>
+                                                    <td>○</td>
+                                                    <td>○</td>
+                                                    <td>
+                                                        ○<br>
+                                                        <span class="fs-10px">
+                                                            +料金承認権限
+                                                        </span>
+                                                    </td>
+                                                    <td>○</td>
+                                                    <td>○</td>
+                                                    <td>○</td>
+                                                    <td>○</td>
+                                                    <td>×</td>
+                                                    <td>
+                                                        △<br>
+                                                        <span class="fs-10px">
+                                                            閲覧のみ	
+                                                        </span>
+                                                    </td>
+                                                    <td>×</td>
+                                                    <td>×</td>
+                                                    <td>○</td>
+                                                </tr>
+                                                <tr class="text-center">
+                                                    <td class="bg-gray">マスター</td>
+                                                    <td>○</td>
+                                                    <td>○</td>
+                                                    <td>○</td>
+                                                    <td>○</td>
+                                                    <td>○</td>
+                                                    <td>○</td>
+                                                    <td>○</td>
+                                                    <td>○</td>
+                                                    <td>○</td>
+                                                    <td>○</td>
+                                                    <td>○</td>
+                                                    <td>×</td>
+                                                    <td>
+                                                        △<br>
+                                                        <span class="fs-10px">
+                                                            担当者・<br>対応国<br>のみ 閲覧可	
+                                                        </span>
+                                                    </td>
+                                                    <td>×</td>
+                                                    <td>○</td>
+                                                </tr>
+                                                <tr class="text-center">
+                                                    <td class="bg-gray">グランドマスター</td>
+                                                    <td>○</td>
+                                                    <td>○</td>
+                                                    <td>○</td>
+                                                    <td>○</td>
+                                                    <td>○</td>
+                                                    <td>○</td>
+                                                    <td>○</td>
+                                                    <td>○</td>
+                                                    <td>○</td>
+                                                    <td>○</td>
+                                                    <td>○</td>
+                                                    <td>○</td>
+                                                    <td>○</td>
+                                                    <td>○</td>
+                                                    <td>○</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tab-2" class="tabcontent" style="display: none;">
+                        <div class="page-title-top">
+                            <p>tab title 2</p>
+                        </div>
+                        <div class="block-content-wrapper">
+                            <div class="block-content">
+                                block content
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tab-3" class="tabcontent" style="display: none;">
+                        <div class="page-title-top">
+                            <p>tab title 3</p>
+                        </div>
+                        <div class="block-content-wrapper">
+                            <div class="block-content">
+                                block content
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tab-4" class="tabcontent" style="display: none;">
+                        <div class="page-title-top">
+                            <p>tab title 4</p>
+                        </div>
+                        <div class="block-content-wrapper">
+                            <div class="block-content">
+                                block content
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tab-5" class="tabcontent" style="display: none;">
+                        <div class="page-title-top">
+                            <p>tab title 5</p>
+                        </div>
+                        <div class="block-content-wrapper">
+                            <div class="block-content">
+                                block content
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tab-6" class="tabcontent" style="display: none;">
+                        <div class="page-title-top">
+                            <p>tab title 6</p>
+                        </div>
+                        <div class="block-content-wrapper">
+                            <div class="block-content">
+                                block content
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tab-7" class="tabcontent" style="display: none;">
+                        <div class="page-title-top">
+                            <p>tab title 7</p>
+                        </div>
+                        <div class="block-content-wrapper">
+                            <div class="block-content">
+                                block content
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tab-8" class="tabcontent" style="display: none;">
+                        <div class="page-title-top">
+                            <p>tab title 8</p>
+                        </div>
+                        <div class="block-content-wrapper">
+                            <div class="block-content">
+                                block content
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tab-9" class="tabcontent" style="display: none;">
+                        <div class="page-title-top">
+                            <p>tab title 9</p>
+                        </div>
+                        <div class="block-content-wrapper">
+                            <div class="block-content">
+                                block content
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tab-10" class="tabcontent" style="display: none;">
+                        <div class="page-title-top">
+                            <p>tab title 10</p>
+                        </div>
+                        <div class="block-content-wrapper">
+                            <div class="block-content">
+                                block content
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tab-11" class="tabcontent" style="display: none;">
+                        <div class="page-title-top">
+                            <p>tab title 11</p>
+                        </div>
+                        <div class="block-content-wrapper">
+                            <div class="block-content">
+                                block content
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-page">
+                    Copyright © 2023 vision-wifi.jp.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="plugins/jquery-1.11.3.min.js"></script>
+    <script src="plugins/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>

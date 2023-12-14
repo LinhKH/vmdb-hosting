@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Top</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./plugins/fontawesome/css/all.min.css">
+        <link rel="stylesheet" href="style/css/style.css" type="text/css">
+    </head>
+    <body>
+
+    <div class="wrapper">
+        <div class="header">
+            <div class="header-left">
+                <a href="#">
+                    <img src="./img/sitelogo_login.png" alt="">
+                </a>
+                <span class="logo-text">開発環境</span>
+            </div>
+            <div class="header-right">
+                <div class="dropdown-menu">
+                    <div class="dropdown-btn">
+                        <span class="sBtn-text">ファムヒューフーンさん</span>
+                        &nbsp;<i class="fas fa-caret-down"></i>
+                    </div>
+                  
+                    <ul class="dropdown-content">
+                        <li class="dropdown-item">
+                            <a class="logout" href="#">ログアウト</a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a href="#">
+                                <span>検索条件のリセット</span><br>
+                                <span class="fs-10px text-gray">
+                                    各種一覧画面で検索実行時に、エラーが発生して画面操作ができなくなった場合は、このボタンを押して下さい。現在ログイン中の担当者が検索した全検索条件を消去します。
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="sidebar-container"></div>
+        <div class="main">
+            <div class="page-container">
+                <div class="block-links-direc">
+                    <a class=" active" href="">ホーム</a>
+                    <a class="" href="">コンタクト管理</a>
+                    <a class="" href="">顧客管理</a>
+                    <a class="" href="">出荷管理</a>
+                    <a class="" href="">受注管理</a>
+                    <a class="" href="">障害管理</a>
+                    <a class="" href="">集計</a>
+                    <a class="" href="">アフィリエイト</a>
+                    <a class="" href="">キャンペーン</a>
+                    <a class="" href="">空港システム</a>
+                    <a class="" href="">システム管理</a>
+                </div>
+                <div class="block-tab-top">
+                    <!-- Tab links -->
+                    <div class="tab tab-list bg-blue-default">
+                        <a class="tablinks tab-btn-1 active" onclick="openTab(event, 'tab-1')">ホーム</a>
+                    </div>
+                    <!-- Tab content -->
+                    <div id="tab-1" class="tabcontent" style="display: block;">
+                        <div class="page-title-top">
+                            <p>ホーム</p>
+                        </div>
+                        <div class="block-content-wrapper">
+                            <div class="block-content">
+                                <div class="text-center open-modal-basic">                                    
+                                    <!-- Trigger/Open The Modal -->
+                                    <a class="text-red font-w-bold modal-trigger" href="" data-modal="modal-01">次回ベーシックパス</a>
+                                    <!-- The Modal -->
+                                    <div class="modal fade modal-basic-pw" id="modal-01">
+                                        <!-- Modal content -->
+                                        <div class="modal-wrapper">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h2 class="modal-title">
+                                                        <div class="d-flex-center-y">
+                                                            <img src="./img/sitelogo_login.png" alt="">
+                                                            <span class="logo-text">開発環境</span>
+                                                        </div>
+                                                    </h2>
+                                                    <!-- <span class="close">&times;</span> -->
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div class="basic-pw">
+                                                        <div class="basic-pw-title">ベーシック認証パスワードに関して</div>
+                                                        <div class="basic-pw-content">
+                                                            <div>
+                                                                <b>2023年4月11日中</b>
+                                                                にベーシック認証パスワードが下記に変更になります。
+                                                            </div>
+                                                            <div>
+                                                                <p class="text-red">▼ID</p>
+                                                                <p class="text-red">vmdb2023</p>
+                                                                <p class="text-red">▼PASS</p>
+                                                                <p class="text-red">Flanaganmurasame0079</p>
+                                                            </div>
+                                                            <div>
+                                                                本メッセージは
+                                                                <b>パスワード変更と同時</b>
+                                                                に消去されます。
+                                                            </div>
+                                                            <div>
+                                                                本画面をキャプチャしたりパスワードをメモする事は禁じますので必ず記憶して下さい。
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="modal-footer modal-footer-center">
+                                                    <div class="btn btn-gray close">閉じる</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-page">
+                    Copyright © 2023 vision-wifi.jp.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="plugins/jquery-1.11.3.min.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>

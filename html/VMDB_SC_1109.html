@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>VMDB_SC_1109</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="plugins/fontawesome/css/all.min.css">
+        <link rel="stylesheet" href="plugins/jquery-ui-1.11.4/jquery-ui.min.css">
+        <link rel="stylesheet" href="style/css/style.css" type="text/css">
+    </head>
+    <body>
+
+    <div class="wrapper">
+        <div class="header">
+            <div class="header-left">
+                <a href="#">
+                    <img src="./img/sitelogo_login.png" alt="">
+                </a>
+                <span class="logo-text">開発環境</span>
+            </div>
+            <div class="header-right">
+                <div class="dropdown-menu">
+                    <div class="dropdown-btn">
+                        <span class="sBtn-text">ファムヒューフーンさん</span>
+                        &nbsp;<i class="fas fa-caret-down"></i>
+                    </div>
+                  
+                    <ul class="dropdown-content">
+                        <li class="dropdown-item">
+                            <a class="logout" href="#">ログアウト</a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a href="#">
+                                <span>検索条件のリセット</span><br>
+                                <span class="fs-10px text-gray">
+                                    各種一覧画面で検索実行時に、エラーが発生して画面操作ができなくなった場合は、このボタンを押して下さい。現在ログイン中の担当者が検索した全検索条件を消去します。
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="sidebar-container"></div>
+        <div class="main">
+            <div class="page-container">
+                <div class="block-links-direc">
+                    <a class="" href="">ホーム</a>
+                    <a class="" href="">コンタクト管理</a>
+                    <a class="" href="">顧客管理</a>
+                    <a class="" href="">出荷管理</a>
+                    <a class="" href="">受注管理</a>
+                    <a class="" href="">障害管理</a>
+                    <a class="" href="">集計</a>
+                    <a class="" href="">アフィリエイト</a>
+                    <a class="" href="">キャンペーン</a>
+                    <a class="" href="">空港システム</a>
+                    <a class="active" href="">システム管理</a>
+                </div>
+                <div class="block-tab-top">
+                    <!-- Tab links -->
+                    <div class="tab tab-list bg-blue-default">
+                        <a class="tablinks tab-btn-1" onclick="openTab(event, 'tab-1')">担当者管理</a>
+                        <a class="tablinks tab-btn-2" onclick="openTab(event, 'tab-2')">対応国管理</a>
+                        <a class="tablinks tab-btn-3" onclick="openTab(event, 'tab-3')">周遊国管理</a>
+                        <a class="tablinks tab-btn-4" onclick="openTab(event, 'tab-4')">商材管理</a>
+                        <a class="tablinks tab-btn-5 active" onclick="openTab(event, 'tab-5')">端末管理</a>
+                        <a class="tablinks tab-btn-6" onclick="openTab(event, 'tab-6')">オプション管理</a>
+                        <a class="tablinks tab-btn-7" onclick="openTab(event, 'tab-7')">オプション長期</a>
+                        <a class="tablinks tab-btn-8" onclick="openTab(event, 'tab-8')">オプションプラン</a>
+                        <a class="tablinks tab-btn-9" onclick="openTab(event, 'tab-9')">場所管理</a>
+                        <a class="tablinks tab-btn-10" onclick="openTab(event, 'tab-10')">受取/返却場所管理</a>
+                        <a class="tablinks tab-btn-11" onclick="openTab(event, 'tab-11')">APIキャッシュ管理</a>
+                    </div>
+                    <!-- Tab content -->
+                    <div id="tab-1" class="tabcontent" style="display: none;">
+                        <div class="page-title-top">
+                            <p>tab title 1</p>
+                        </div>
+                        <div class="block-content-wrapper">
+                            <div class="block-content">
+                                block content
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tab-2" class="tabcontent" style="display: none;">
+                        <div class="page-title-top">
+                            <p>tab title 2</p>
+                        </div>
+                        <div class="block-content-wrapper">
+                            <div class="block-content">
+                                block content
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tab-3" class="tabcontent" style="display: none;">
+                        <div class="page-title-top">
+                            <p>tab title 3</p>
+                        </div>
+                        <div class="block-content-wrapper">
+                            <div class="block-content">
+                                block content
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tab-4" class="tabcontent" style="display: none;">
+                        <div class="page-title-top">
+                            <p>tab title 4</p>
+                        </div>
+                        <div class="block-content-wrapper">
+                            <div class="block-content">
+                                block content
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tab-5" class="tabcontent" style="display: block;">
+                        <div class="page-title-top">
+                            <p>端末基本情報一覧</p>
+                        </div>
+                        <div class="block-content-wrapper">
+                            <div class="block-content">
+                                <div class="block-group-search">
+                                    <div class="search-row">
+                                        <div class="field-search field-2w field-mobile-1w">
+                                            <label for="001" class="label-control">商品コード</label>
+                                            <div class="field-search-input">
+                                                <input type="text" name="" id="001" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="field-search field-2w field-mobile-1w">
+                                            <label for="002" class="label-control">メーカー</label>
+                                            <div class="field-search-input">
+                                                <input type="text" name="" id="002" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="field-search field-2w">
+                                            <label for="003" class="label-control">商品名</label>
+                                            <div class="field-search-input">
+                                                <input type="text" name="" id="003" class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="search-row">
+                                        <div class="field-search field-2w field-mobile-1w">
+                                            <label for="006" class="label-control">対応国</label>
+                                            <div class="field-search-input">
+                                                <select name="" id="006" class="form-control">
+                                                    <option value="">選択</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="field-search field-2w field-mobile-1w">
+                                            <label for="007" class="label-control">登録担当者</label>
+                                            <div class="field-search-input">
+                                                <select name="" id="007" class="form-control">
+                                                    <option value="">選択</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="field-search">
+                                            <label for="008" class="label-control">登録日</label>
+                                            <div class="field-search-input">
+                                                <input type="text" name="" id="008" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="field-search">
+                                            <div class="d-flex-center-y ml-20px">
+                                                <label class="d-flex-center-y">
+                                                    <input type="radio" name="search_reg_dt_cond_compare" value="Y" checked="" class="">
+                                                    <span class="">以上</span>
+                                                </label>
+                                                <label class="d-flex-center-y ml-20px">
+                                                    <input type="radio" name="search_reg_dt_cond_compare" value="N" checked="" class="">
+                                                    <span class="">以下</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="field-search one-field-mobile-right">
+                                            <div class="field-search-input ml-20px ">
+                                                <a href="" class="btn btn-black">
+                                                    <i class="fas fa-search"></i>&nbsp;&nbsp;&nbsp;
+                                                    <span>検索</span>
+                                                </a>
+                                                <a href="" class="btn btn-gray">クリア</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="text-red fs-10px mb-10px">※早割料金は申込日が3日前の場合に適用されます</p>
+                                <div class="block-search-result">
+                                    <div class="search-result-top">
+                                        <div class="search-result-title">
+                                            該当：61件
+                                        </div>
+                                        <div class="d-flex-center-y">
+                                            <select id="001xx" class="form-control flex-1">
+                                                <option value="">表示順逆順</option>
+                                            </select>
+                                            <label for="002xx" class="label-control">表示数</label>
+                                            <select id="002xx" class="form-control flex-1">
+                                                <option value="">15件</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="search-result-table">
+                                        <table class="table table-bordered table-fixed">
+                                            <colgroup>
+                                                <col style="width: 500px;">
+                                                <col style="width: 100px;">
+                                                <col style="width: 500px;">
+                                                <col style="width: 100px;">
+                                                <col style="width: 110px;">
+                                                <col style="width: 130px;">
+                                                <col style="width: 80px;">
+                                            </colgroup>
+                                            <thead>
+                                                <tr class="bg-gray text-center">
+                                                    <td>商品コード</td>
+                                                    <td>メーカー</td>
+                                                    <td>商品名</td>
+                                                    <td>対応国</td>
+                                                    <td>登録担当</td>
+                                                    <td>登録日時</td>
+                                                    <td>詳細</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>UCloudlink_U3</td>
+                                                    <td>UCloudlink</td>
+                                                    <td>U3</td>
+                                                    <td></td>
+                                                    <td class="">システム管理者W</td>
+                                                    <td class="text-center">2023/06/07 15:24</td>
+                                                    <td class="text-center"><a href="#" class="btn btn-primary">詳細</a></td>
+                                                </tr>
+                                                <tr class="bg-gray">
+                                                    <td>Inseego_MiFi M2100 5G UW</td>
+                                                    <td>Inseego</td>
+                                                    <td>MiFi M2100</td>
+                                                    <td></td>
+                                                    <td class="">システム管理者W</td>
+                                                    <td class="text-center">2023/06/07 15:24</td>
+                                                    <td class="text-center"><a href="#" class="btn btn-primary">詳細</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>MODACOM_KWD-H1000NB</td>
+                                                    <td>MODACOM</td>
+                                                    <td>KWD-H1000</td>
+                                                    <td></td>
+                                                    <td class="">システム管理者W</td>
+                                                    <td class="text-center">2023/06/07 15:24</td>
+                                                    <td class="text-center"><a href="#" class="btn btn-primary">詳細</a></td>
+                                                </tr>
+                                                <tr class="bg-gray">
+                                                    <td>HUAWEI_E5336</td>
+                                                    <td>HUAWEI</td>
+                                                    <td>E5577C</td>
+                                                    <td></td>
+                                                    <td class="">システム管理者W</td>
+                                                    <td class="text-center">2023/06/07 15:24</td>
+                                                    <td class="text-center"><a href="#" class="btn btn-primary">詳細</a></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="search-pagination">
+                                        <p class="search-result-title">
+                                            <span>1〜15</span>
+                                            &nbsp;/&nbsp;
+                                            <span>9,591件</span>
+                                        </p>
+                                        <div class="pagi">
+                                            <ul id="componentContainer" class="pagination-container">
+                                                <li>
+                                                    <button href="" class="back-button paginate-buttons">
+                                                    <a><i class="fas fa-chevron-left"></i></a>
+                                                    </button>
+                                                </li>
+                                                <li>
+                                                    <button href="" class="paginate-buttons number-buttons active-page">1</button>
+                                                </li>
+                                                <li>
+                                                    <button href="" class="paginate-buttons number-buttons">2</button>
+                                                </li>
+                                                <li>
+                                                    <button href="" class="paginate-buttons number-buttons">3</button>
+                                                </li>
+                                                <li>
+                                                    <button href="" class="paginate-buttons number-buttons">4</button>
+                                                </li>
+                                                <li>
+                                                    <button href="" class="paginate-buttons number-buttons">5</button>
+                                                </li>
+                                                <li>
+                                                    <button href="" class="ending-breakpoint-button paginate-buttons"><button href="" class="ending-breakpoint-button paginate-buttons"></button>
+                                                </li>
+                                                <li>
+                                                    <button href="" class="last-button paginate-buttons">207</button>
+                                                </li>
+                                                <li>
+                                                    <button href="" class="paginate-buttons next-button">
+                                                    <a><i class="fas fa-chevron-right"></i></a>
+                                                    </button>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tab-6" class="tabcontent" style="display: none;">
+                        <div class="page-title-top">
+                            <p>tab title 6</p>
+                        </div>
+                        <div class="block-content-wrapper">
+                            <div class="block-content">
+                                block content
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tab-7" class="tabcontent" style="display: none;">
+                        <div class="page-title-top">
+                            <p>tab title 7</p>
+                        </div>
+                        <div class="block-content-wrapper">
+                            <div class="block-content">
+                                block content
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tab-8" class="tabcontent" style="display: none;">
+                        <div class="page-title-top">
+                            <p>tab title 8</p>
+                        </div>
+                        <div class="block-content-wrapper">
+                            <div class="block-content">
+                                block content
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tab-9" class="tabcontent" style="display: none;">
+                        <div class="page-title-top">
+                            <p>tab title 9</p>
+                        </div>
+                        <div class="block-content-wrapper">
+                            <div class="block-content">
+                                block content
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tab-10" class="tabcontent" style="display: none;">
+                        <div class="page-title-top">
+                            <p>tab title 10</p>
+                        </div>
+                        <div class="block-content-wrapper">
+                            <div class="block-content">
+                                block content
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tab-11" class="tabcontent" style="display: none;">
+                        <div class="page-title-top">
+                            <p>tab title 11</p>
+                        </div>
+                        <div class="block-content-wrapper">
+                            <div class="block-content">
+                                block content
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-page">
+                    Copyright © 2023 vision-wifi.jp.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="plugins/jquery-1.11.3.min.js"></script>
+    <script src="plugins/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
