@@ -9,7 +9,7 @@
     "src": "resources/img/sitelogo_login.png"
   },
   "resources/js/app.css": {
-    "file": "assets/app-0145f34e.css",
+    "file": "assets/app-d180dc10.css",
     "src": "resources/js/app.css"
   },
   "resources/js/app.js": {
@@ -17,14 +17,14 @@
       "assets/sitelogo_login-127f5ba7.png"
     ],
     "css": [
-      "assets/app-0145f34e.css"
+      "assets/app-d180dc10.css"
     ],
-    "file": "assets/app-4d19ae1f.js",
+    "file": "assets/app-85291730.js",
     "isEntry": true,
     "src": "resources/js/app.js"
   },
   "resources/plugins/fontawesome/css/all.min.css": {
-    "file": "assets/all.min-e2d4c4ba.css",
+    "file": "assets/all.min-69ea264a.css",
     "isEntry": true,
     "src": "resources/plugins/fontawesome/css/all.min.css"
   },
@@ -89,7 +89,7 @@
     "src": "resources/plugins/fontawesome/webfonts/fa-solid-900.woff2"
   },
   "resources/scss/style.scss": {
-    "file": "assets/style-504d046d.css",
+    "file": "assets/style-e59fada8.css",
     "isEntry": true,
     "src": "resources/scss/style.scss"
   }
