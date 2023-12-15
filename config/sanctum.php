@@ -17,7 +17,7 @@ return [
 
     'stateful' => explode(',', env('SANCTUM_STATEFUL_DOMAINS', sprintf(
         '%s%s',
-        'dev-vmdb-re.gw-dev.jp,localhost,localhost:8000,localhost:3000,127.0.0.1,127.0.0.1:8000,::1',
+        'news-portal.shop,https://news-portal.shop,localhost,localhost:8000,localhost:3000,127.0.0.1,127.0.0.1:8000,::1',
         Sanctum::currentApplicationUrlWithPort()
     ))),
 
