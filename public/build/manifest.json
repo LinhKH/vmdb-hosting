@@ -19,12 +19,12 @@
     "css": [
       "assets/app-d180dc10.css"
     ],
-    "file": "assets/app-144bb83d.js",
+    "file": "assets/app-6366d08e.js",
     "isEntry": true,
     "src": "resources/js/app.js"
   },
   "resources/plugins/fontawesome/css/all.min.css": {
-    "file": "assets/all.min-71706515.css",
+    "file": "assets/all.min-d2b98c8b.css",
     "isEntry": true,
     "src": "resources/plugins/fontawesome/css/all.min.css"
   },
